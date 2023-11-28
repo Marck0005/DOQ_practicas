@@ -15,6 +15,7 @@
     "data": [
         'views/library_book.xml',
         'views/res_partner.xml',
+        'views/library_book_genre.xml',
         'security/ir.model.access.csv',
         ],
    
