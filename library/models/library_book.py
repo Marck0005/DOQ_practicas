@@ -5,12 +5,25 @@ class LibraryBooks(models.Model):
     _name = 'library.book'
     _description = 'Model for book registry'
     
+    _inherits = {'product.template': 'product_tmpl_id'}
+     
+
+    #Campo que relaciona el libro creado con un objeto de tipo product
+   
+    product_tmpl_id = fields.Many2one(
+        string='product_tmpl_id',
+        comodel_name='product.template',
+        ondelete='cascade',
+        auto_join = True,
+        required = True,
+    )
+    
     
     #Nombre Libro --> Caracteres
-    name = fields.Char(string='Name', required=True)
+    #name = fields.Char(string='Name')
     
     #Precio --> Float
-    price = fields.Float(string='Price')
+    #list_price = fields.Float(string='Price')
     
     #Edicion --> Int
     edition = fields.Integer(string='Edition' )

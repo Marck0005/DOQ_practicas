@@ -11,7 +11,7 @@
     "license": "AGPL-3",
     "application": True,
     "installable": True,
-    "depends": ['base'],
+    "depends": ['base', 'product'],
     "data": [
         'views/library_book.xml',
         'views/res_partner.xml',
