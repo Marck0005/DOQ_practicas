@@ -7,23 +7,25 @@ class LibraryBooks(models.Model):
     
     
     #Nombre Libro --> Caracteres
-    name = fields.Char(string='Name', required=True ,translate = True)
+    name = fields.Char(string='Name', required=True)
     
     #Precio --> Float
     price = fields.Float(string='Price')
     
     #Edicion --> Int
-    edition = fields.Integer(string='Edition' ,translate = True)
+    edition = fields.Integer(string='Edition' )
     
     #Impreso o digital --> Selección
-    book_type = fields.Selection(string='Book type', selection=[('printed', 'Printed'), ('digital', 'Digital'),], translate = True)
+    book_type = fields.Selection(string='Book type', selection=[('printed', 'Printed'), ('digital', 'Digital'),])
     
     #Enlace web de compra --> Caracteres
-    web = fields.Char(string='Purchase Link',translate = True)
+    web = fields.Char(string='Purchase Link')
     
     #Se ha comprado --> Bool
-    is_purchased = fields.Boolean(string='Is purchased?',translate = True)
+    is_purchased = fields.Boolean(string='Is purchased?')
     
     #Fecha de compra --> DateTime
-    date = fields.Datetime(string='Date Purchase',translate = True)
+    date = fields.Datetime(string='Date Purchase')
+    
+    
     
