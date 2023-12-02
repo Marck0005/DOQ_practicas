@@ -9,7 +9,7 @@ class LibraryBooks(models.Model):
      
 
     #Campo que relaciona el libro creado con un objeto de tipo product
-   
+  
     product_tmpl_id = fields.Many2one(
         string='product_tmpl_id',
         comodel_name='product.template',
@@ -17,13 +17,18 @@ class LibraryBooks(models.Model):
         auto_join = True,
         required = True,
     )
+  
+    
+    #Relación con autores, como un autor puede tener muchos libros pero 
+    # un libro solo tiene un autor es many2one (muchos libros tienen solo 1 autor)
+    author_id = fields.Many2one(comodel_name='res.partner', string='')
+    
+    #Relación con generos, como un libro puede tener muchos generos y un genero puede tener muchos
+    #libros es many2many 
+    genre_ids = fields.Many2many(comodel_name='library.book.genre')
     
     
-    #Nombre Libro --> Caracteres
-    #name = fields.Char(string='Name')
     
-    #Precio --> Float
-    #list_price = fields.Float(string='Price')
     
     #Edicion --> Int
     edition = fields.Integer(string='Edition' )

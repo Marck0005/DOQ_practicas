@@ -12,8 +12,11 @@
 
                         <group>
                             <field name="name"/>
+                            <field name="author_id"/>
                             <field name="list_price"/>
                             <field name="edition"/>
+                            <field name="genre_ids" widget="many2many_tags"/>
+
                         </group>
 
 
@@ -37,8 +40,10 @@
         <field name="arch" type="xml">
             <tree>
                 <field name="name"/>
+                <field name="author_id"/>
                 <field name="list_price"/>
                 <field name="edition"/>
+                <field name="genre_ids" widget="many2many_tags"/>
                 <field name="book_type"/>
                 <field name="web"/>
                 <field name="is_purchased"/>
@@ -65,18 +70,6 @@
         </field>
     </record>
 
-    <!-- VISTAS DEL MODELO LIBRARY BOOK GENRE -->
-
-
-    <!-- VISTAS DEL MODELO RES PARTNER-->
-
-
-
-
-    <!-- ACCIONES DEL MENU -->
-
-
- 
 
 
 
@@ -98,4 +91,40 @@
 
 
 </odoo>
- 
+<!-- 
+
+
+
+    ● Como he creado un libro desde el punto de menú Librería / Datos / Libros, entonces
+    en el Inventario deben aparecer los libros dentro del submenú Productos.
+
+    ● Como estoy dentro del formulario de un libro, cuando de clic en editar entonces he
+    de poder agregar un autor, ya creado o por crear, en un campo del formulario.
+
+    ●  Como estoy dentro de un libro, cuando de clic en el campo géneros, entonces he de
+    poder seleccionar varios géneros a la vez.
+
+    ● Dado que estoy en el punto de menú Librería / Datos / Autores, cuando cree un
+    autor entonces debo poder establecer varios géneros.
+
+    ● Como estoy dentro de un formulario de un libro, ha de aparecer un check que
+    indique si se trata de un pack.
+
+    ● Como estoy dentro de un formulario de un libro, cuando de clic en el check es un
+    pack, entonces ha de aparecer una nueva pestaña en el formulario, llamada
+    componentes.
+
+    ● Como estoy dentro de la pestaña componentes, cuando de clic en la tabla de
+    componentes, entonces he de poder agregar, en la misma tabla, un nuevo libro y la
+    cantidad del libro que incluye el pack.
+
+    ● Como estoy dentro del menú Libros, cuando de clic en el filtro Packs, entonces solo
+    se han de mostrar los libros que están marcados como Packs.
+
+
+
+
+
+
+
+  -->
