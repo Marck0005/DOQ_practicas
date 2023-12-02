@@ -25,7 +25,7 @@ class LibraryBooks(models.Model):
     
     #Relación con generos, como un libro puede tener muchos generos y un genero puede tener muchos
     #libros es many2many 
-    genre_ids = fields.Many2many(comodel_name='library.book.genre')
+    genres_ids = fields.Many2many(comodel_name='library.book.genre')
     
     
     

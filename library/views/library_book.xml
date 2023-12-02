@@ -15,7 +15,7 @@
                             <field name="author_id"/>
                             <field name="list_price"/>
                             <field name="edition"/>
-                            <field name="genre_ids" widget="many2many_tags"/>
+                            <field name="genres_ids" widget="many2many_tags"/>
 
                         </group>
 
@@ -43,7 +43,7 @@
                 <field name="author_id"/>
                 <field name="list_price"/>
                 <field name="edition"/>
-                <field name="genre_ids" widget="many2many_tags"/>
+                <field name="genres_ids" widget="many2many_tags"/>
                 <field name="book_type"/>
                 <field name="web"/>
                 <field name="is_purchased"/>
@@ -93,7 +93,7 @@
 </odoo>
 <!-- 
 
-
+    ____________________________________HECHOS____________________________________________
 
     ● Como he creado un libro desde el punto de menú Librería / Datos / Libros, entonces
     en el Inventario deben aparecer los libros dentro del submenú Productos.
@@ -106,6 +106,11 @@
 
     ● Dado que estoy en el punto de menú Librería / Datos / Autores, cuando cree un
     autor entonces debo poder establecer varios géneros.
+
+
+    ____________________________________TO DO____________________________________________
+
+
 
     ● Como estoy dentro de un formulario de un libro, ha de aparecer un check que
     indique si se trata de un pack.
