@@ -22,10 +22,23 @@
 
                         <group>
                             <field name="book_type"/>
+                            <field name="is_pack"/>
                             <field name="web"/>
                             <field name="is_purchased"/>
                             <field name="date"/>
                         </group>
+
+
+                        <notebook>
+                            <page name="Components" attrs="{ 'invisible': [('is_pack', '=', False)] }">
+                                <field name="lines_ids">
+                                    <tree editable='bottom'>
+                                        <field name="pack_id" domain="[('is_pack', '=', False)]"/>
+                                        <field name="book_quantity"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
 
                     </group>
                 </sheet>
@@ -70,7 +83,18 @@
         </field>
     </record>
 
+    <!-- library_book search view -->
+    <record id="library_book_view_search" model="ir.ui.view">
+        <field name="name">library_book.view.search</field>
+        <field name="model">library.book</field>
+        <field name="arch" type="xml">
+            <search string="Search Description">
+                <!-- Add your fields here -->
+                <filter string="Packs" name="pack_search" domain="[('is_pack', '=', True)]"/>
 
+            </search>
+        </field>
+    </record>
 
 
 
@@ -91,45 +115,4 @@
 
 
 </odoo>
-<!-- 
 
-    ____________________________________HECHOS____________________________________________
-
-    ● Como he creado un libro desde el punto de menú Librería / Datos / Libros, entonces
-    en el Inventario deben aparecer los libros dentro del submenú Productos.
-
-    ● Como estoy dentro del formulario de un libro, cuando de clic en editar entonces he
-    de poder agregar un autor, ya creado o por crear, en un campo del formulario.
-
-    ●  Como estoy dentro de un libro, cuando de clic en el campo géneros, entonces he de
-    poder seleccionar varios géneros a la vez.
-
-    ● Dado que estoy en el punto de menú Librería / Datos / Autores, cuando cree un
-    autor entonces debo poder establecer varios géneros.
-
-
-    ____________________________________TO DO____________________________________________
-
-
-
-    ● Como estoy dentro de un formulario de un libro, ha de aparecer un check que
-    indique si se trata de un pack.
-
-    ● Como estoy dentro de un formulario de un libro, cuando de clic en el check es un
-    pack, entonces ha de aparecer una nueva pestaña en el formulario, llamada
-    componentes.
-
-    ● Como estoy dentro de la pestaña componentes, cuando de clic en la tabla de
-    componentes, entonces he de poder agregar, en la misma tabla, un nuevo libro y la
-    cantidad del libro que incluye el pack.
-
-    ● Como estoy dentro del menú Libros, cuando de clic en el filtro Packs, entonces solo
-    se han de mostrar los libros que están marcados como Packs.
-
-
-
-
-
-
-
-  -->

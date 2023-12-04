@@ -27,7 +27,11 @@ class LibraryBooks(models.Model):
     #libros es many2many 
     genres_ids = fields.Many2many(comodel_name='library.book.genre')
     
+    #Relación con componentes, como muchas lineas pueden pertenecer a un pack entonces one2many
+    is_pack = fields.Boolean(string='')
+    lines_ids = fields.One2many(comodel_name='library.book.component.line', inverse_name='pack_id')
     
+
     
     
     #Edicion --> Int
