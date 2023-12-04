@@ -12,17 +12,33 @@
 
                         <group>
                             <field name="name"/>
-                            <field name="price"/>
+                            <field name="author_id"/>
+                            <field name="list_price"/>
                             <field name="edition"/>
+                            <field name="genres_ids" widget="many2many_tags"/>
+
                         </group>
 
 
                         <group>
                             <field name="book_type"/>
+                            <field name="is_pack"/>
                             <field name="web"/>
                             <field name="is_purchased"/>
                             <field name="date"/>
                         </group>
+
+
+                        <notebook>
+                            <page name="Components" attrs="{ 'invisible': [('is_pack', '=', False)] }">
+                                <field name="lines_ids">
+                                    <tree editable='bottom'>
+                                        <field name="pack_id" domain="[('is_pack', '=', False)]"/>
+                                        <field name="book_quantity"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
 
                     </group>
                 </sheet>
@@ -37,8 +53,10 @@
         <field name="arch" type="xml">
             <tree>
                 <field name="name"/>
-                <field name="price"/>
+                <field name="author_id"/>
+                <field name="list_price"/>
                 <field name="edition"/>
+                <field name="genres_ids" widget="many2many_tags"/>
                 <field name="book_type"/>
                 <field name="web"/>
                 <field name="is_purchased"/>
@@ -65,19 +83,18 @@
         </field>
     </record>
 
-    <!-- VISTAS DEL MODELO LIBRARY BOOK GENRE -->
+    <!-- library_book search view -->
+    <record id="library_book_view_search" model="ir.ui.view">
+        <field name="name">library_book.view.search</field>
+        <field name="model">library.book</field>
+        <field name="arch" type="xml">
+            <search string="Search Description">
+                <!-- Add your fields here -->
+                <filter string="Packs" name="pack_search" domain="[('is_pack', '=', True)]"/>
 
-
-    <!-- VISTAS DEL MODELO RES PARTNER-->
-
-
-
-
-    <!-- ACCIONES DEL MENU -->
-
-
- 
-
+            </search>
+        </field>
+    </record>
 
 
 
@@ -98,4 +115,4 @@
 
 
 </odoo>
- 
+
