@@ -37,6 +37,10 @@ class LibraryBooks(models.Model):
     # Edicion --> Int
     edition = fields.Integer(string='Edition')
     
+    pack_type = fields.Selection(string='Pack type',
+                                 selection=[('saga', 'Saga'),
+                                            ('collection', 'Collection')],
+                                 default='collection')  # Set default value to 'collection'
     
 
     

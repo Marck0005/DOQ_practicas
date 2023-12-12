@@ -23,6 +23,7 @@
                         <group>
                             <field name="book_type"/>
                             <field name="is_pack"/>
+                            <field name="pack_type" attrs="{ 'invisible': [('is_pack', '=', False)] }"/>
                             <field name="web"/>
                             <field name="is_purchased"/>
                             <field name="date"/>
@@ -82,6 +83,7 @@
             </p>
         </field>
     </record>
+    
 
     <!-- library_book search view -->
     <record id="library_book_view_search" model="ir.ui.view">
@@ -90,7 +92,9 @@
         <field name="arch" type="xml">
             <search string="Search Description">
                 <!-- Add your fields here -->
-                <filter string="Packs" name="pack_search" domain="[('is_pack', '=', True)]"/>
+                <filter string="Packs" name="packs_search" domain="[('is_pack', '=', True)]"/>
+                <filter string="Collections" name="collections_search" domain="[('is_pack', '=', True) , ('pack_type' , '=', 'collection')]"/>
+                <filter string="Sagas" name="sagas_search" domain="[('is_pack', '=', True) , ('pack_type' , '=', 'saga')]"/>
 
             </search>
         </field>
