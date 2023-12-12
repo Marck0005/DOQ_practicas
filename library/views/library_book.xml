@@ -33,7 +33,7 @@
                             <page name="Components" attrs="{ 'invisible': [('is_pack', '=', False)] }">
                                 <field name="lines_ids">
                                     <tree editable='bottom'>
-                                        <field name="pack_id" domain="[('is_pack', '=', False)]"/>
+                                        <field name="component_id" domain="[('is_pack', '=', False)]"/>
                                         <field name="book_quantity"/>
                                     </tree>
                                 </field>
