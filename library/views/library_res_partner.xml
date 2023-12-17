@@ -4,7 +4,7 @@
     <!-- VISTA HEREDADA -->
     <!-- res.partner inherit form view -->
 
-    <!-- <record id="library_res_partner_inherit_view_form" model="ir.ui.view">
+    <!-- <record id="library_book_author_view_form" model="ir.ui.view">
         <field name="name">view.partner.form</field>
         <field name="model">library.book.author</field>
         <field name="mode">primary</field>
@@ -14,7 +14,9 @@
             <xpath expr="//field[@name='category_id']" position="before">
                 <group>
                     <group>
-
+                        <field name = "first_name"/>
+                        <field name = "last_name"/>
+                        <field name="author_id"/>
                         <field name="genres_ids" widget="many2many_tags"/>
 
                     </group>
@@ -52,6 +54,9 @@
                 <sheet>
                     <group>
                         <field name="author_id"/>
+                        <field name = "first_name"/>
+                        <field name = "last_name"/>
+                        <field name="name" />
                         <field name="genres_ids" widget="many2many_tags" />
                     </group>
                 </sheet>
