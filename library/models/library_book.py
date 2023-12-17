@@ -1,4 +1,4 @@
-from odoo import fields, models
+from odoo import fields, models, api
 
 
 class LibraryBooks(models.Model):
@@ -32,7 +32,7 @@ class LibraryBooks(models.Model):
                                 inverse_name='pack_id')
     
 
-    
+    #detailed_type = fields.Selection(related='product_tmpl_id.detailed_type')
     
     # Edicion --> Int
     edition = fields.Integer(string='Edition')
@@ -58,6 +58,17 @@ class LibraryBooks(models.Model):
     
     #Fecha de compra --> DateTime
     date = fields.Datetime(string='Date Purchase')
+    
+    
+    @api.onchange('is_pack')
+    def _onchange_is_pack(self):
+        if self.is_pack == False:
+            self.pack_type = False
+            
+    @api.onchange('author_id')
+    def _onchange_genres_ids(self):
+        self.genres_ids += self.author_id.genres_ids 
+    
     
     
     

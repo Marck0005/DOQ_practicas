@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 16.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-04 22:28+0000\n"
-"PO-Revision-Date: 2023-12-04 23:32+0100\n"
+"POT-Creation-Date: 2023-12-17 13:40+0000\n"
+"PO-Revision-Date: 2023-12-17 14:45+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: es\n"
@@ -23,34 +23,52 @@ msgid "# Product Variants"
 msgstr ""
 
 #. module: library
+#: model:ir.model.fields,field_description:library.field_library_book_author__supplier_invoice_count
+msgid "# Vendor Bills"
+msgstr ""
+
+#. module: library
 #: model:ir.model.fields,help:library.field_library_book_author__type
 msgid ""
-"- Contact: Use this to organize the contact details of employees of a given company (e."
-"g. CEO, CFO, ...).\n"
-"- Invoice Address : Preferred address for all invoices. Selected by default when you "
-"invoice an order that belongs to this company.\n"
-"- Delivery Address : Preferred address for all deliveries. Selected by default when you "
-"deliver an order that belongs to this company.\n"
-"- Private: Private addresses are only visible by authorized users and contain sensitive "
-"data (employee home addresses, ...).\n"
+"- Contact: Use this to organize the contact details of employees of a given company (e.g. CEO, "
+"CFO, ...).\n"
+"- Invoice Address : Preferred address for all invoices. Selected by default when you invoice an "
+"order that belongs to this company.\n"
+"- Delivery Address : Preferred address for all deliveries. Selected by default when you deliver an "
+"order that belongs to this company.\n"
+"- Private: Private addresses are only visible by authorized users and contain sensitive data "
+"(employee home addresses, ...).\n"
 "- Other: Other address for the company (e.g. subsidiary, ...)"
 msgstr ""
 
 #. module: library
 #: model:ir.model.fields,help:library.field_library_book__description_sale
 msgid ""
-"A description of the Product that you want to communicate to your customers. This "
-"description will be copied to every Sales Order, Delivery Order and Customer Invoice/"
-"Credit Note"
+"A description of the Product that you want to communicate to your customers. This description will "
+"be copied to every Sales Order, Delivery Order and Customer Invoice/Credit Note"
 msgstr ""
 
 #. module: library
 #: model:ir.model.fields,help:library.field_library_book__detailed_type
 msgid ""
-"A storable product is a product for which you manage stock. The Inventory app has to be "
-"installed.\n"
+"A storable product is a product for which you manage stock. The Inventory app has to be installed.\n"
 "A consumable product is a product for which stock is not managed.\n"
 "A service is a non-material product you provide."
+msgstr ""
+
+#. module: library
+#: model:ir.model.fields,field_description:library.field_library_book_author__property_account_payable_id
+msgid "Account Payable"
+msgstr ""
+
+#. module: library
+#: model:ir.model.fields,field_description:library.field_library_book_author__property_account_receivable_id
+msgid "Account Receivable"
+msgstr ""
+
+#. module: library
+#: model:ir.model.fields,field_description:library.field_library_book__account_tag_ids
+msgid "Account Tags"
 msgstr ""
 
 #. module: library
@@ -95,14 +113,18 @@ msgid "Activity Type Icon"
 msgstr ""
 
 #. module: library
+#: model:ir.model.fields,field_description:library.field_library_book_author__additional_info
+msgid "Additional info"
+msgstr ""
+
+#. module: library
 #: model:ir.model.fields,field_description:library.field_library_book_author__type
 msgid "Address Type"
 msgstr ""
 
 #. module: library
 #: model:ir.model.fields,help:library.field_library_book_author__lang
-msgid ""
-"All the emails and documents sent to this contact will be translated in this language."
+msgid "All the emails and documents sent to this contact will be translated in this language."
 msgstr ""
 
 #. module: library
@@ -122,6 +144,13 @@ msgstr "Autor"
 #: model:ir.ui.menu,name:library.menu_library_authors
 msgid "Authors"
 msgstr "Autores"
+
+#. module: library
+#: model:ir.model.fields,help:library.field_library_book_author__receipt_reminder_email
+msgid ""
+"Automatically send a confirmation email to the vendor X days before the expected receipt date, "
+"asking him to confirm the exact date."
+msgstr ""
 
 #. module: library
 #: model:ir.model.fields,field_description:library.field_library_book_author__avatar_1920
@@ -149,6 +178,11 @@ msgid "Avatar 512"
 msgstr ""
 
 #. module: library
+#: model:ir.model.fields,field_description:library.field_library_book_author__bank_account_count
+msgid "Bank"
+msgstr ""
+
+#. module: library
 #: model:ir.model.fields,field_description:library.field_library_book_author__bank_ids
 msgid "Banks"
 msgstr ""
@@ -162,6 +196,16 @@ msgstr ""
 #. module: library
 #: model:ir.model.fields,field_description:library.field_library_book_author__is_blacklisted
 msgid "Blacklist"
+msgstr ""
+
+#. module: library
+#: model:ir.model.fields,field_description:library.field_library_book_author__mobile_blacklisted
+msgid "Blacklisted Phone Is Mobile"
+msgstr ""
+
+#. module: library
+#: model:ir.model.fields,field_description:library.field_library_book_author__phone_blacklisted
+msgid "Blacklisted Phone is Phone"
 msgstr ""
 
 #. module: library
@@ -207,6 +251,11 @@ msgid "Can be Sold"
 msgstr ""
 
 #. module: library
+#: model:ir.model.fields,field_description:library.field_library_book__route_from_categ_ids
+msgid "Category Routes"
+msgstr ""
+
+#. module: library
 #: model:ir.model.fields,field_description:library.field_library_book_author__channel_ids
 msgid "Channels"
 msgstr ""
@@ -227,6 +276,16 @@ msgid "City"
 msgstr ""
 
 #. module: library
+#: model:ir.model.fields.selection,name:library.selection__library_book__pack_type__collection
+msgid "Collection"
+msgstr ""
+
+#. module: library
+#: model_terms:ir.ui.view,arch_db:library.library_book_view_search
+msgid "Collections"
+msgstr ""
+
+#. module: library
 #: model:ir.model.fields,field_description:library.field_library_book__color
 #: model:ir.model.fields,field_description:library.field_library_book_author__color
 msgid "Color Index"
@@ -235,6 +294,11 @@ msgstr ""
 #. module: library
 #: model:ir.model.fields,field_description:library.field_library_book_author__commercial_partner_id
 msgid "Commercial Entity"
+msgstr ""
+
+#. module: library
+#: model:ir.model.fields,field_description:library.field_library_book_author__ref_company_ids
+msgid "Companies that refers to partner"
 msgstr ""
 
 #. module: library
@@ -264,19 +328,34 @@ msgid "Company Type"
 msgstr ""
 
 #. module: library
+#: model:ir.model.fields,field_description:library.field_library_book_author__partner_gid
+msgid "Company database ID"
+msgstr ""
+
+#. module: library
 #: model:ir.model.fields,field_description:library.field_library_book_author__contact_address
 msgid "Complete Address"
+msgstr ""
+
+#. module: library
+#: model:ir.model.fields,field_description:library.field_library_book_component_line__component_id
+msgid "Component"
 msgstr ""
 
 #. module: library
 #: model:ir.model,name:library.model_res_partner
 #: model:ir.model.fields,field_description:library.field_library_book_author__child_ids
 msgid "Contact"
-msgstr ""
+msgstr "Contacto"
 
 #. module: library
 #: model:ir.model.fields,field_description:library.field_library_book_author__contact_address_complete
 msgid "Contact Address Complete"
+msgstr ""
+
+#. module: library
+#: model:ir.model.fields,field_description:library.field_library_book__purchase_method
+msgid "Control Policy"
 msgstr ""
 
 #. module: library
@@ -287,6 +366,11 @@ msgstr ""
 #. module: library
 #: model:ir.model.fields,field_description:library.field_library_book__cost_currency_id
 msgid "Cost Currency"
+msgstr ""
+
+#. module: library
+#: model:ir.model.fields,field_description:library.field_library_book__cost_method
+msgid "Costing Method"
 msgstr ""
 
 #. module: library
@@ -321,8 +405,44 @@ msgid "Created on"
 msgstr "Creado el"
 
 #. module: library
+#: model:ir.model.fields,field_description:library.field_library_book_author__credit_limit
+msgid "Credit Limit"
+msgstr ""
+
+#. module: library
+#: model:ir.model.fields,help:library.field_library_book_author__credit_limit
+msgid "Credit limit specific to this partner."
+msgstr ""
+
+#. module: library
 #: model:ir.model.fields,field_description:library.field_library_book__currency_id
+#: model:ir.model.fields,field_description:library.field_library_book_author__currency_id
 msgid "Currency"
+msgstr ""
+
+#. module: library
+#: model:ir.model.fields,field_description:library.field_library_book__sale_delay
+msgid "Customer Lead Time"
+msgstr ""
+
+#. module: library
+#: model:ir.model.fields,field_description:library.field_library_book_author__property_stock_customer
+msgid "Customer Location"
+msgstr ""
+
+#. module: library
+#: model:ir.model.fields,field_description:library.field_library_book_author__property_payment_term_id
+msgid "Customer Payment Terms"
+msgstr ""
+
+#. module: library
+#: model:ir.model.fields,field_description:library.field_library_book_author__customer_rank
+msgid "Customer Rank"
+msgstr ""
+
+#. module: library
+#: model:ir.model.fields,field_description:library.field_library_book__taxes_id
+msgid "Customer Taxes"
 msgstr ""
 
 #. module: library
@@ -341,6 +461,21 @@ msgid "Date Purchase"
 msgstr "Fecha de compra"
 
 #. module: library
+#: model:ir.model.fields,field_description:library.field_library_book_author__reminder_date_before_receipt
+msgid "Days Before Receipt"
+msgstr ""
+
+#. module: library
+#: model:ir.model.fields,help:library.field_library_book__supplier_taxes_id
+msgid "Default taxes used when buying the product."
+msgstr ""
+
+#. module: library
+#: model:ir.model.fields,help:library.field_library_book__taxes_id
+msgid "Default taxes used when selling the product."
+msgstr ""
+
+#. module: library
 #: model:ir.model.fields,help:library.field_library_book__uom_id
 msgid "Default unit of measure used for all stock operations."
 msgstr ""
@@ -348,13 +483,47 @@ msgstr ""
 #. module: library
 #: model:ir.model.fields,help:library.field_library_book__uom_po_id
 msgid ""
-"Default unit of measure used for purchase orders. It must be in the same category as "
-"the default unit of measure."
+"Default unit of measure used for purchase orders. It must be in the same category as the default "
+"unit of measure."
+msgstr ""
+
+#. module: library
+#: model:ir.model.fields,field_description:library.field_library_book_author__trust
+msgid "Degree of trust you have in this debtor"
+msgstr ""
+
+#. module: library
+#: model:ir.model.fields,help:library.field_library_book__sale_delay
+msgid ""
+"Delivery lead time, in days. It's the number of days, promised to the customer, between the "
+"confirmation of the sales order and the delivery."
+msgstr ""
+
+#. module: library
+#: model:ir.model.fields,help:library.field_library_book__route_ids
+msgid ""
+"Depending on the modules installed, this will allow you to define the route of the product: whether "
+"it will be bought, manufactured, replenished on order, etc."
 msgstr ""
 
 #. module: library
 #: model:ir.model.fields,field_description:library.field_library_book__description
 msgid "Description"
+msgstr ""
+
+#. module: library
+#: model:ir.model.fields,field_description:library.field_library_book__description_pickingout
+msgid "Description on Delivery Orders"
+msgstr ""
+
+#. module: library
+#: model:ir.model.fields,field_description:library.field_library_book__description_picking
+msgid "Description on Picking"
+msgstr ""
+
+#. module: library
+#: model:ir.model.fields,field_description:library.field_library_book__description_pickingin
+msgid "Description on Receptions"
 msgstr ""
 
 #. module: library
@@ -371,6 +540,11 @@ msgid "Display Name"
 msgstr ""
 
 #. module: library
+#: model:ir.model.fields,field_description:library.field_library_book_author__duplicated_bank_account_partners_count
+msgid "Duplicated Bank Account Partners Count"
+msgstr ""
+
+#. module: library
 #: model:ir.model.fields,field_description:library.field_library_book__edition
 msgid "Edition"
 msgstr "Edición"
@@ -378,8 +552,8 @@ msgstr "Edición"
 #. module: library
 #: model:ir.model.fields,help:library.field_library_book_author__partner_share
 msgid ""
-"Either customer (not a user), either shared user. Indicated the current partner is a "
-"customer without access or with a limited access created for sharing data."
+"Either customer (not a user), either shared user. Indicated the current partner is a customer "
+"without access or with a limited access created for sharing data."
 msgstr ""
 
 #. module: library
@@ -393,8 +567,40 @@ msgid "Employee"
 msgstr ""
 
 #. module: library
+#: model:ir.model.fields,help:library.field_library_book__tracking
+msgid "Ensure the traceability of a storable product in your warehouse."
+msgstr ""
+
+#. module: library
+#: model:ir.model.fields,field_description:library.field_library_book__property_account_expense_id
+msgid "Expense Account"
+msgstr ""
+
+#. module: library
+#: model:ir.model.fields,help:library.field_library_book__expense_policy
+msgid ""
+"Expenses and vendor bills can be re-invoiced to a customer.With this option, a validated expense "
+"can be re-invoice to a customer at its cost or sales price."
+msgstr ""
+
+#. module: library
 #: model:ir.model.fields,field_description:library.field_library_book__priority
 msgid "Favorite"
+msgstr ""
+
+#. module: library
+#: model:ir.model.fields,help:library.field_library_book_author__phone_sanitized
+msgid "Field used to store sanitized phone number. Helps speeding up searches and comparisons."
+msgstr ""
+
+#. module: library
+#: model:ir.model.fields,field_description:library.field_library_book_author__first_name
+msgid "First Name"
+msgstr ""
+
+#. module: library
+#: model:ir.model.fields,field_description:library.field_library_book_author__property_account_position_id
+msgid "Fiscal Position"
 msgstr ""
 
 #. module: library
@@ -413,6 +619,11 @@ msgstr ""
 #: model:ir.model.fields,help:library.field_library_book__activity_type_icon
 #: model:ir.model.fields,help:library.field_library_book_author__activity_type_icon
 msgid "Font awesome icon e.g. fa-tasks"
+msgstr ""
+
+#. module: library
+#: model:ir.model.fields,field_description:library.field_library_book__virtual_available
+msgid "Forecasted Quantity"
 msgstr ""
 
 #. module: library
@@ -464,6 +675,11 @@ msgid "Has Message"
 msgstr ""
 
 #. module: library
+#: model:ir.model.fields,field_description:library.field_library_book_author__has_unreconciled_entries
+msgid "Has Unreconciled Entries"
+msgstr ""
+
+#. module: library
 #: model:ir.model.fields,field_description:library.field_library_book__id
 #: model:ir.model.fields,field_description:library.field_library_book_author__id
 #: model:ir.model.fields,field_description:library.field_library_book_component_line__id
@@ -496,14 +712,28 @@ msgstr ""
 
 #. module: library
 #: model:ir.model.fields,help:library.field_library_book__message_has_error
+#: model:ir.model.fields,help:library.field_library_book__message_has_sms_error
 #: model:ir.model.fields,help:library.field_library_book_author__message_has_error
+#: model:ir.model.fields,help:library.field_library_book_author__message_has_sms_error
 msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: library
+#: model:ir.model.fields,help:library.field_library_book_author__team_id
+msgid "If set, this Sales Team will be used for sales and assignments related to this partner"
 msgstr ""
 
 #. module: library
 #: model:ir.model.fields,help:library.field_library_book_author__is_blacklisted
 msgid ""
-"If the email address is on the blacklist, the contact won't receive mass mailing "
+"If the email address is on the blacklist, the contact won't receive mass mailing anymore, from any "
+"list"
+msgstr ""
+
+#. module: library
+#: model:ir.model.fields,help:library.field_library_book_author__phone_sanitized_blacklisted
+msgid ""
+"If the sanitized phone number is on the blacklist, the contact won't receive mass mailing sms "
 "anymore, from any list"
 msgstr ""
 
@@ -546,11 +776,33 @@ msgstr ""
 #: model:ir.model.fields,help:library.field_library_book__standard_price
 msgid ""
 "In Standard Price & AVCO: value of the product (automatically computed in AVCO).\n"
-"        In FIFO: value of the next unit that will leave the stock (automatically "
-"computed).\n"
-"        Used to value the product when the purchase cost is not known (e.g. inventory "
-"adjustment).\n"
+"        In FIFO: value of the next unit that will leave the stock (automatically computed).\n"
+"        Used to value the product when the purchase cost is not known (e.g. inventory adjustment).\n"
 "        Used to compute margins on sale orders."
+msgstr ""
+
+#. module: library
+#: model:ir.model.fields,field_description:library.field_library_book__property_account_income_id
+msgid "Income Account"
+msgstr ""
+
+#. module: library
+#: model:ir.model.fields,field_description:library.field_library_book__incoming_qty
+msgid "Incoming"
+msgstr ""
+
+#. module: library
+#: model:ir.model.fields,help:library.field_library_book_author__mobile_blacklisted
+msgid ""
+"Indicates if a blacklisted sanitized phone number is a mobile number. Helps distinguish which "
+"number is blacklisted             when there is both a mobile and phone field in a model."
+msgstr ""
+
+#. module: library
+#: model:ir.model.fields,help:library.field_library_book_author__phone_blacklisted
+msgid ""
+"Indicates if a blacklisted sanitized phone number is a phone number. Helps distinguish which number "
+"is blacklisted             when there is both a mobile and phone field in a model."
 msgstr ""
 
 #. module: library
@@ -561,6 +813,31 @@ msgstr ""
 #. module: library
 #: model:ir.model.fields,field_description:library.field_library_book__default_code
 msgid "Internal Reference"
+msgstr ""
+
+#. module: library
+#: model:ir.model.fields,field_description:library.field_library_book__property_stock_inventory
+msgid "Inventory Location"
+msgstr ""
+
+#. module: library
+#: model:ir.model.fields,field_description:library.field_library_book__valuation
+msgid "Inventory Valuation"
+msgstr ""
+
+#. module: library
+#: model:ir.model.fields,field_description:library.field_library_book_author__invoice_warn
+msgid "Invoice"
+msgstr ""
+
+#. module: library
+#: model:ir.model.fields,field_description:library.field_library_book_author__invoice_ids
+msgid "Invoices"
+msgstr ""
+
+#. module: library
+#: model:ir.model.fields,field_description:library.field_library_book__invoice_policy
+msgid "Invoicing Policy"
 msgstr ""
 
 #. module: library
@@ -605,6 +882,24 @@ msgid "Job Position"
 msgstr ""
 
 #. module: library
+#: model:ir.model.fields,field_description:library.field_library_book_author__journal_item_count
+msgid "Journal Items"
+msgstr ""
+
+#. module: library
+#: model:ir.model.fields,help:library.field_library_book__property_account_income_id
+msgid "Keep this field empty to use the default value from the product category."
+msgstr ""
+
+#. module: library
+#: model:ir.model.fields,help:library.field_library_book__property_account_expense_id
+msgid ""
+"Keep this field empty to use the default value from the product category. If anglo-saxon accounting "
+"with automated valuation method is configured, the expense account on the product category will be "
+"used."
+msgstr ""
+
+#. module: library
 #: model:ir.model.fields,field_description:library.field_library_book_author__lang
 msgid "Language"
 msgstr ""
@@ -615,6 +910,11 @@ msgstr ""
 #: model:ir.model.fields,field_description:library.field_library_book_component_line____last_update
 #: model:ir.model.fields,field_description:library.field_library_book_genre____last_update
 msgid "Last Modified on"
+msgstr ""
+
+#. module: library
+#: model:ir.model.fields,field_description:library.field_library_book_author__last_name
+msgid "Last Name"
 msgstr ""
 
 #. module: library
@@ -634,6 +934,19 @@ msgid "Last Updated on"
 msgstr ""
 
 #. module: library
+#: model:ir.model.fields,help:library.field_library_book_author__last_time_entries_checked
+msgid ""
+"Last time the invoices & payments matching was performed for this partner. It is set either if "
+"there's not at least an unreconciled debit and an unreconciled credit or if you click the \"Done\" "
+"button."
+msgstr ""
+
+#. module: library
+#: model:ir.model.fields,field_description:library.field_library_book_author__last_time_entries_checked
+msgid "Latest Invoices & Payments Matching Date"
+msgstr ""
+
+#. module: library
 #: model:ir.ui.menu,name:library.library_book_menu_act
 msgid "Library"
 msgstr "Librería"
@@ -644,9 +957,32 @@ msgid "Lines"
 msgstr ""
 
 #. module: library
+#: model:ir.model.fields,field_description:library.field_library_book__location_id
+msgid "Location"
+msgstr ""
+
+#. module: library
 #: model:ir.model.fields,field_description:library.field_library_book__message_main_attachment_id
 #: model:ir.model.fields,field_description:library.field_library_book_author__message_main_attachment_id
 msgid "Main Attachment"
+msgstr ""
+
+#. module: library
+#: model:ir.model.fields,help:library.field_library_book__valuation
+msgid ""
+"Manual: The accounting entries to value the inventory are not posted automatically.\n"
+"        Automated: An accounting entry is automatically created to value the inventory when a "
+"product enters or leaves the company.\n"
+"        "
+msgstr ""
+
+#. module: library
+#: model:ir.model.fields,help:library.field_library_book__service_type
+msgid ""
+"Manually set quantities on order: Invoice based on the manually entered quantity, without creating "
+"an analytic account.\n"
+"Timesheets on contract: Invoice based on the tracked hours on the related timesheet.\n"
+"Create a task and track hours: Create a task on the sales order validation and track the work hours."
 msgstr ""
 
 #. module: library
@@ -658,6 +994,36 @@ msgstr ""
 #: model:ir.model.fields,field_description:library.field_library_book__message_has_error
 #: model:ir.model.fields,field_description:library.field_library_book_author__message_has_error
 msgid "Message Delivery error"
+msgstr ""
+
+#. module: library
+#: model:ir.model.fields,field_description:library.field_library_book_author__invoice_warn_msg
+msgid "Message for Invoice"
+msgstr ""
+
+#. module: library
+#: model:ir.model.fields,field_description:library.field_library_book_author__purchase_warn_msg
+msgid "Message for Purchase Order"
+msgstr ""
+
+#. module: library
+#: model:ir.model.fields,field_description:library.field_library_book__purchase_line_warn_msg
+msgid "Message for Purchase Order Line"
+msgstr ""
+
+#. module: library
+#: model:ir.model.fields,field_description:library.field_library_book_author__sale_warn_msg
+msgid "Message for Sales Order"
+msgstr ""
+
+#. module: library
+#: model:ir.model.fields,field_description:library.field_library_book__sale_line_warn_msg
+msgid "Message for Sales Order Line"
+msgstr ""
+
+#. module: library
+#: model:ir.model.fields,field_description:library.field_library_book_author__picking_warn_msg
+msgid "Message for Stock Picking"
 msgstr ""
 
 #. module: library
@@ -696,6 +1062,16 @@ msgid "Name"
 msgstr "Nombre"
 
 #. module: library
+#: model:ir.model.fields,field_description:library.field_library_book__nbr_moves_in
+msgid "Nbr Moves In"
+msgstr ""
+
+#. module: library
+#: model:ir.model.fields,field_description:library.field_library_book__nbr_moves_out
+msgid "Nbr Moves Out"
+msgstr ""
+
+#. module: library
 #: model:ir.model.fields,field_description:library.field_library_book__activity_date_deadline
 #: model:ir.model.fields,field_description:library.field_library_book_author__activity_date_deadline
 msgid "Next Activity Deadline"
@@ -730,9 +1106,19 @@ msgid "Number of Actions"
 msgstr ""
 
 #. module: library
+#: model:ir.model.fields,help:library.field_library_book_author__reminder_date_before_receipt
+msgid "Number of days to send reminder email before the promised receipt date"
+msgstr ""
+
+#. module: library
 #: model:ir.model.fields,field_description:library.field_library_book__message_has_error_counter
 #: model:ir.model.fields,field_description:library.field_library_book_author__message_has_error_counter
 msgid "Number of errors"
+msgstr ""
+
+#. module: library
+#: model:ir.model.fields,help:library.field_library_book__nbr_moves_in
+msgid "Number of incoming stock moves in the past 12 months"
 msgstr ""
 
 #. module: library
@@ -748,14 +1134,60 @@ msgid "Number of messages with delivery error"
 msgstr ""
 
 #. module: library
+#: model:ir.model.fields,help:library.field_library_book__nbr_moves_out
+msgid "Number of outgoing stock moves in the past 12 months"
+msgstr ""
+
+#. module: library
 #: model:ir.model.fields,field_description:library.field_library_book__pricelist_item_count
 msgid "Number of price rules"
+msgstr ""
+
+#. module: library
+#: model:ir.model.fields,field_description:library.field_library_book_author__ocn_token
+msgid "OCN Token"
+msgstr ""
+
+#. module: library
+#: model:ir.model.fields,help:library.field_library_book__purchase_method
+msgid ""
+"On ordered quantities: Control bills based on ordered quantities.\n"
+"On received quantities: Control bills based on received quantities."
+msgstr ""
+
+#. module: library
+#: model:ir.model.fields,field_description:library.field_library_book_author__on_time_rate
+msgid "On-Time Delivery Rate"
+msgstr ""
+
+#. module: library
+#: model:ir.model.fields,help:library.field_library_book__invoice_policy
+msgid ""
+"Ordered Quantity: Invoice quantities ordered by the customer.\n"
+"Delivered Quantity: Invoice quantities delivered to the customer."
+msgstr ""
+
+#. module: library
+#: model:ir.model.fields,field_description:library.field_library_book__outgoing_qty
+msgid "Outgoing"
+msgstr ""
+
+#. module: library
+#: model:ir.model.fields,help:library.field_library_book_author__on_time_rate
+msgid ""
+"Over the past x days; the number of products received on time divided by the number of ordered "
+"products.x is either the System Parameter purchase_stock.on_time_delivery_days or the default 365"
 msgstr ""
 
 #. module: library
 #: model:ir.model.fields,field_description:library.field_library_book_component_line__pack_id
 msgid "Pack"
 msgstr ""
+
+#. module: library
+#: model:ir.model.fields,field_description:library.field_library_book__pack_type
+msgid "Pack type"
+msgstr "Tipo de pack"
 
 #. module: library
 #: model_terms:ir.ui.view,arch_db:library.library_book_view_search
@@ -773,6 +1205,16 @@ msgstr ""
 #: model:ir.model.fields,field_description:library.field_res_users__is_partner
 msgid "Partner"
 msgstr "Socio"
+
+#. module: library
+#: model:ir.model.fields,field_description:library.field_library_book_author__contract_ids
+msgid "Partner Contracts"
+msgstr ""
+
+#. module: library
+#: model:ir.model.fields,field_description:library.field_library_book_author__use_partner_credit_limit
+msgid "Partner Limit"
+msgstr ""
 
 #. module: library
 #: model:ir.model.fields,field_description:library.field_library_book_author__partner_number
@@ -799,8 +1241,46 @@ msgid "Partners"
 msgstr "Socios"
 
 #. module: library
+#: model:ir.model.fields,field_description:library.field_library_book_author__debit_limit
+msgid "Payable Limit"
+msgstr ""
+
+#. module: library
+#: model:ir.model.fields,field_description:library.field_library_book_author__property_payment_method_id
+msgid "Payment Method"
+msgstr ""
+
+#. module: library
+#: model:ir.model.fields,field_description:library.field_library_book_author__payment_token_count
+msgid "Payment Token Count"
+msgstr ""
+
+#. module: library
+#: model:ir.model.fields,field_description:library.field_library_book_author__payment_token_ids
+msgid "Payment Tokens"
+msgstr ""
+
+#. module: library
 #: model:ir.model.fields,field_description:library.field_library_book_author__phone
 msgid "Phone"
+msgstr ""
+
+#. module: library
+#: model:ir.model.fields,field_description:library.field_library_book_author__phone_sanitized_blacklisted
+msgid "Phone Blacklisted"
+msgstr ""
+
+#. module: library
+#: model:ir.model.fields,field_description:library.field_library_book_author__phone_mobile_search
+msgid "Phone/Mobile"
+msgstr ""
+
+#. module: library
+#: model:ir.model.fields,help:library.field_library_book_author__property_payment_method_id
+msgid ""
+"Preferred payment method when paying this vendor. This is used to filter vendor bills by preferred "
+"payment method to register payments in mass. Use cases: create bank files for batch wires, check "
+"runs."
 msgstr ""
 
 #. module: library
@@ -854,6 +1334,11 @@ msgid "Product Type"
 msgstr ""
 
 #. module: library
+#: model:ir.model.fields,field_description:library.field_library_book__property_stock_production
+msgid "Production Location"
+msgstr ""
+
+#. module: library
 #: model:ir.model.fields,field_description:library.field_library_book__product_variant_ids
 msgid "Products"
 msgstr ""
@@ -864,13 +1349,63 @@ msgid "Purchase Description"
 msgstr ""
 
 #. module: library
+#: model:ir.model.fields,field_description:library.field_library_book_author__purchase_line_ids
+msgid "Purchase Lines"
+msgstr ""
+
+#. module: library
 #: model:ir.model.fields,field_description:library.field_library_book__web
 msgid "Purchase Link"
 msgstr "Link de compra"
 
 #. module: library
+#: model:ir.model.fields,field_description:library.field_library_book_author__purchase_warn
+msgid "Purchase Order"
+msgstr ""
+
+#. module: library
+#: model:ir.model.fields,field_description:library.field_library_book_author__purchase_order_count
+msgid "Purchase Order Count"
+msgstr ""
+
+#. module: library
+#: model:ir.model.fields,field_description:library.field_library_book__purchase_line_warn
+msgid "Purchase Order Line Warning"
+msgstr ""
+
+#. module: library
 #: model:ir.model.fields,field_description:library.field_library_book__uom_po_id
 msgid "Purchase UoM"
+msgstr ""
+
+#. module: library
+#: model:ir.model.fields,field_description:library.field_library_book__purchased_product_qty
+msgid "Purchased"
+msgstr ""
+
+#. module: library
+#: model:ir.model.fields,field_description:library.field_library_book__qty_available
+msgid "Quantity On Hand"
+msgstr ""
+
+#. module: library
+#: model:ir.model.fields,field_description:library.field_library_book__visible_qty_configurator
+msgid "Quantity visible in configurator"
+msgstr ""
+
+#. module: library
+#: model:ir.model.fields,field_description:library.field_library_book__expense_policy
+msgid "Re-Invoice Expenses"
+msgstr ""
+
+#. module: library
+#: model:ir.model.fields,field_description:library.field_library_book__visible_expense_policy
+msgid "Re-Invoice Policy visible"
+msgstr ""
+
+#. module: library
+#: model:ir.model.fields,field_description:library.field_library_book_author__receipt_reminder_email
+msgid "Receipt Reminder"
 msgstr ""
 
 #. module: library
@@ -884,9 +1419,60 @@ msgid "Related Company"
 msgstr ""
 
 #. module: library
+#: model:ir.model.fields,field_description:library.field_library_book__reordering_max_qty
+msgid "Reordering Max Qty"
+msgstr ""
+
+#. module: library
+#: model:ir.model.fields,field_description:library.field_library_book__reordering_min_qty
+msgid "Reordering Min Qty"
+msgstr ""
+
+#. module: library
+#: model:ir.model.fields,field_description:library.field_library_book__nbr_reordering_rules
+msgid "Reordering Rules"
+msgstr ""
+
+#. module: library
+#: model:ir.model.fields,field_description:library.field_library_book__responsible_id
+msgid "Responsible"
+msgstr ""
+
+#. module: library
 #: model:ir.model.fields,field_description:library.field_library_book__activity_user_id
 #: model:ir.model.fields,field_description:library.field_library_book_author__activity_user_id
 msgid "Responsible User"
+msgstr ""
+
+#. module: library
+#: model:ir.model.fields,field_description:library.field_library_book__route_ids
+msgid "Routes"
+msgstr ""
+
+#. module: library
+#: model:ir.model.fields,field_description:library.field_library_book__has_available_route_ids
+msgid "Routes can be selected on this product"
+msgstr ""
+
+#. module: library
+#: model:ir.model.fields,field_description:library.field_library_book__message_has_sms_error
+#: model:ir.model.fields,field_description:library.field_library_book_author__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr ""
+
+#. module: library
+#: model:ir.model.fields.selection,name:library.selection__library_book__pack_type__saga
+msgid "Saga"
+msgstr ""
+
+#. module: library
+#: model_terms:ir.ui.view,arch_db:library.library_book_view_search
+msgid "Sagas"
+msgstr ""
+
+#. module: library
+#: model:ir.model.fields,field_description:library.field_library_book_author__sale_order_count
+msgid "Sale Order Count"
 msgstr ""
 
 #. module: library
@@ -895,8 +1481,29 @@ msgid "Sales Description"
 msgstr ""
 
 #. module: library
+#: model:ir.model,name:library.model_sale_order
+#: model:ir.model.fields,field_description:library.field_library_book_author__sale_order_ids
+msgid "Sales Order"
+msgstr "Pedido de venta"
+
+#. module: library
+#: model:ir.model.fields,field_description:library.field_library_book__sale_line_warn
+msgid "Sales Order Line"
+msgstr ""
+
+#. module: library
 #: model:ir.model.fields,field_description:library.field_library_book__list_price
 msgid "Sales Price"
+msgstr ""
+
+#. module: library
+#: model:ir.model.fields,field_description:library.field_library_book_author__team_id
+msgid "Sales Team"
+msgstr ""
+
+#. module: library
+#: model:ir.model.fields,field_description:library.field_library_book_author__sale_warn
+msgid "Sales Warnings"
 msgstr ""
 
 #. module: library
@@ -905,8 +1512,26 @@ msgid "Salesperson"
 msgstr ""
 
 #. module: library
+#: model:ir.model.fields,field_description:library.field_library_book_author__phone_sanitized
+msgid "Sanitized Number"
+msgstr ""
+
+#. module: library
 #: model_terms:ir.ui.view,arch_db:library.library_book_view_search
 msgid "Search Description"
+msgstr ""
+
+#. module: library
+#: model:ir.model.fields,help:library.field_library_book__purchase_line_warn
+#: model:ir.model.fields,help:library.field_library_book__sale_line_warn
+#: model:ir.model.fields,help:library.field_library_book_author__invoice_warn
+#: model:ir.model.fields,help:library.field_library_book_author__picking_warn
+#: model:ir.model.fields,help:library.field_library_book_author__purchase_warn
+#: model:ir.model.fields,help:library.field_library_book_author__sale_warn
+msgid ""
+"Selecting the \"Warning\" option will notify user with the message, Selecting \"Blocking Message\" "
+"will throw an exception with the message and block the flow. The Message has to be written in the "
+"next field."
 msgstr ""
 
 #. module: library
@@ -922,6 +1547,21 @@ msgstr ""
 #. module: library
 #: model:ir.model.fields,field_description:library.field_library_book_author__partner_share
 msgid "Share Partner"
+msgstr ""
+
+#. module: library
+#: model:ir.model.fields,field_description:library.field_library_book_author__show_credit_limit
+msgid "Show Credit Limit"
+msgstr ""
+
+#. module: library
+#: model:ir.model.fields,field_description:library.field_library_book__show_forecasted_qty_status_button
+msgid "Show Forecasted Qty Status Button"
+msgstr ""
+
+#. module: library
+#: model:ir.model.fields,field_description:library.field_library_book__show_on_hand_qty_status_button
+msgid "Show On Hand Qty Status Button"
 msgstr ""
 
 #. module: library
@@ -950,6 +1590,21 @@ msgid "Signup URL"
 msgstr ""
 
 #. module: library
+#: model:ir.model.fields,field_description:library.field_library_book__sales_count
+msgid "Sold"
+msgstr ""
+
+#. module: library
+#: model:ir.model.fields,help:library.field_library_book__cost_method
+msgid ""
+"Standard Price: The products are valued at their standard cost defined on the product.\n"
+"        Average Cost (AVCO): The products are valued at weighted average cost.\n"
+"        First In First Out (FIFO): The products are valued supposing those that enter the company "
+"first will also leave it first.\n"
+"        "
+msgstr ""
+
+#. module: library
 #: model_terms:ir.actions.act_window,help:library.library_book_action
 msgid "Start by creating a book"
 msgstr "Empieza creando un libro"
@@ -970,6 +1625,11 @@ msgid ""
 msgstr ""
 
 #. module: library
+#: model:ir.model.fields,field_description:library.field_library_book_author__picking_warn
+msgid "Stock Picking"
+msgstr ""
+
+#. module: library
 #: model:ir.model.fields,field_description:library.field_library_book_author__street
 msgid "Street"
 msgstr ""
@@ -980,13 +1640,38 @@ msgid "Street2"
 msgstr ""
 
 #. module: library
+#: model:ir.model.fields,field_description:library.field_library_book_author__property_purchase_currency_id
+msgid "Supplier Currency"
+msgstr ""
+
+#. module: library
+#: model:ir.model.fields,field_description:library.field_library_book_author__supplier_rank
+msgid "Supplier Rank"
+msgstr ""
+
+#. module: library
 #: model:ir.model.fields,field_description:library.field_library_book_author__category_id
 msgid "Tags"
 msgstr ""
 
 #. module: library
+#: model:ir.model.fields,help:library.field_library_book__account_tag_ids
+msgid "Tags to be set on the base and tax journal items created for this product."
+msgstr ""
+
+#. module: library
 #: model:ir.model.fields,field_description:library.field_library_book_author__vat
 msgid "Tax ID"
+msgstr ""
+
+#. module: library
+#: model:ir.model.fields,field_description:library.field_library_book__tax_string
+msgid "Tax String"
+msgstr ""
+
+#. module: library
+#: model:ir.model.fields,field_description:library.field_library_book__tic_category_id
+msgid "TaxCloud Category"
 msgstr ""
 
 #. module: library
@@ -999,8 +1684,13 @@ msgstr ""
 #. module: library
 #: model:ir.model.fields,help:library.field_library_book_author__vat
 msgid ""
-"The Tax Identification Number. Values here will be validated based on the country "
-"format. You can use '/' to indicate that the partner is not subject to tax."
+"The Tax Identification Number. Values here will be validated based on the country format. You can "
+"use '/' to indicate that the partner is not subject to tax."
+msgstr ""
+
+#. module: library
+#: model:ir.model.fields,help:library.field_library_book_author__property_account_position_id
+msgid "The fiscal position determines the taxes/accounts used for this contact."
 msgstr ""
 
 #. module: library
@@ -1009,24 +1699,97 @@ msgid "The internal user in charge of this contact."
 msgstr ""
 
 #. module: library
+#: model:ir.model.fields,help:library.field_library_book_author__has_unreconciled_entries
+msgid ""
+"The partner has at least one unreconciled debit and credit since last time the invoices & payments "
+"matching was performed."
+msgstr ""
+
+#. module: library
 #: model:ir.model.fields,help:library.field_library_book_author__company_registry
 msgid ""
-"The registry number of the company. Use it if it is different from the Tax ID. It must "
-"be unique across all partners of a same country"
+"The registry number of the company. Use it if it is different from the Tax ID. It must be unique "
+"across all partners of a same country"
+msgstr ""
+
+#. module: library
+#: model:ir.model.fields,help:library.field_library_book_author__property_stock_customer
+msgid "The stock location used as destination when sending goods to this contact."
+msgstr ""
+
+#. module: library
+#: model:ir.model.fields,help:library.field_library_book_author__property_stock_supplier
+msgid "The stock location used as source when receiving goods from this contact."
+msgstr ""
+
+#. module: library
+#: model:ir.model.fields,help:library.field_library_book_author__property_account_payable_id
+msgid ""
+"This account will be used instead of the default one as the payable account for the current partner"
+msgstr ""
+
+#. module: library
+#: model:ir.model.fields,help:library.field_library_book_author__property_account_receivable_id
+msgid ""
+"This account will be used instead of the default one as the receivable account for the current "
+"partner"
+msgstr ""
+
+#. module: library
+#: model:ir.model.fields,help:library.field_library_book_author__property_purchase_currency_id
+msgid "This currency will be used, instead of the default one, for purchases from the current partner"
 msgstr ""
 
 #. module: library
 #: model:ir.model.fields,help:library.field_library_book_author__email_normalized
 msgid ""
-"This field is used to search on email address as the primary email field can contain "
-"more than strictly an email address."
+"This field is used to search on email address as the primary email field can contain more than "
+"strictly an email address."
+msgstr ""
+
+#. module: library
+#: model:ir.model.fields,help:library.field_library_book_author__property_supplier_payment_term_id
+msgid "This payment term will be used instead of the default one for purchase orders and vendor bills"
+msgstr ""
+
+#. module: library
+#: model:ir.model.fields,help:library.field_library_book_author__property_payment_term_id
+msgid ""
+"This payment term will be used instead of the default one for sales orders and customer invoices"
 msgstr ""
 
 #. module: library
 #: model:ir.model.fields,help:library.field_library_book_author__property_product_pricelist
+msgid "This pricelist will be used, instead of the default one, for sales to the current partner"
+msgstr ""
+
+#. module: library
+#: model:ir.model.fields,help:library.field_library_book__tic_category_id
 msgid ""
-"This pricelist will be used, instead of the default one, for sales to the current "
-"partner"
+"This refers to TIC (Taxability Information Codes), these are used by TaxCloud to compute specific "
+"tax rates for each product type. The value set here prevails over the one set on the product "
+"category."
+msgstr ""
+
+#. module: library
+#: model:ir.model.fields,help:library.field_library_book__property_stock_production
+msgid ""
+"This stock location will be used, instead of the default one, as the source location for stock "
+"moves generated by manufacturing orders."
+msgstr ""
+
+#. module: library
+#: model:ir.model.fields,help:library.field_library_book__property_stock_inventory
+msgid ""
+"This stock location will be used, instead of the default one, as the source location for stock "
+"moves generated when you do an inventory."
+msgstr ""
+
+#. module: library
+#: model:ir.model.fields,help:library.field_library_book__responsible_id
+msgid ""
+"This user will be responsible of the next activities related to logistic operations for this "
+"product."
 msgstr ""
 
 #. module: library
@@ -1042,6 +1805,41 @@ msgstr ""
 #. module: library
 #: model:ir.model.fields,field_description:library.field_library_book_author__title
 msgid "Title"
+msgstr ""
+
+#. module: library
+#: model:ir.model.fields,field_description:library.field_library_book_author__total_invoiced
+msgid "Total Invoiced"
+msgstr ""
+
+#. module: library
+#: model:ir.model.fields,field_description:library.field_library_book_author__debit
+msgid "Total Payable"
+msgstr ""
+
+#. module: library
+#: model:ir.model.fields,field_description:library.field_library_book_author__credit
+msgid "Total Receivable"
+msgstr ""
+
+#. module: library
+#: model:ir.model.fields,help:library.field_library_book_author__credit
+msgid "Total amount this customer owes you."
+msgstr ""
+
+#. module: library
+#: model:ir.model.fields,help:library.field_library_book_author__debit
+msgid "Total amount you have to pay to this vendor."
+msgstr ""
+
+#. module: library
+#: model:ir.model.fields,field_description:library.field_library_book__service_type
+msgid "Track Service"
+msgstr ""
+
+#. module: library
+#: model:ir.model.fields,field_description:library.field_library_book__tracking
+msgid "Tracking"
 msgstr ""
 
 #. module: library
@@ -1071,6 +1869,11 @@ msgid "Use a barcode to identify this contact."
 msgstr ""
 
 #. module: library
+#: model:ir.model.fields,help:library.field_library_book_author__ocn_token
+msgid "Used for sending notification to registered devices"
+msgstr ""
+
+#. module: library
 #: model:ir.model.fields,field_description:library.field_library_book_author__user_ids
 msgid "Users"
 msgstr ""
@@ -1083,6 +1886,21 @@ msgstr ""
 #. module: library
 #: model:ir.model.fields,field_description:library.field_library_book__variant_seller_ids
 msgid "Variant Seller"
+msgstr ""
+
+#. module: library
+#: model:ir.model.fields,field_description:library.field_library_book_author__property_stock_supplier
+msgid "Vendor Location"
+msgstr ""
+
+#. module: library
+#: model:ir.model.fields,field_description:library.field_library_book_author__property_supplier_payment_term_id
+msgid "Vendor Payment Terms"
+msgstr ""
+
+#. module: library
+#: model:ir.model.fields,field_description:library.field_library_book__supplier_taxes_id
+msgid "Vendor Taxes"
 msgstr ""
 
 #. module: library
@@ -1101,8 +1919,25 @@ msgid "Volume unit of measure label"
 msgstr ""
 
 #. module: library
+#: model:ir.model.fields,field_description:library.field_library_book__warehouse_id
+msgid "Warehouse"
+msgstr ""
+
+#. module: library
 #: model:ir.model.fields,field_description:library.field_library_book_author__website
 msgid "Website Link"
+msgstr ""
+
+#. module: library
+#: model:ir.model.fields,field_description:library.field_library_book__website_message_ids
+#: model:ir.model.fields,field_description:library.field_library_book_author__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: library
+#: model:ir.model.fields,help:library.field_library_book__website_message_ids
+#: model:ir.model.fields,help:library.field_library_book_author__website_message_ids
+msgid "Website communication history"
 msgstr ""
 
 #. module: library
@@ -1118,8 +1953,8 @@ msgstr ""
 #. module: library
 #: model:ir.model.fields,help:library.field_library_book_author__tz
 msgid ""
-"When printing documents and exporting/importing data, time values are computed "
-"according to this timezone.\n"
+"When printing documents and exporting/importing data, time values are computed according to this "
+"timezone.\n"
 "If the timezone is not set, UTC (Coordinated Universal Time) is used.\n"
 "Anywhere else, time values are computed according to the time offset of your web client."
 msgstr ""
