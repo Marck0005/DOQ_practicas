@@ -33,13 +33,13 @@ class LibraryResPartner(models.Model):
     
     @api.depends('first_name', 'last_name')
     def _compute_name(self):
-        self.name = ' '
-        name = ''
-        if self.first_name:
-            name += self.first_name
-        if self.last_name:
-            name += ' ' + self.last_name
-        self.name = name.strip() 
+        for rec in self:
+            name = ''
+            if rec.first_name:
+                name += rec.first_name
+            if rec.last_name:
+                name += ' ' + rec.last_name
+            rec.name = name.strip()
         
 
     
