@@ -16,6 +16,8 @@
         'views/library_book.xml',
         'views/library_res_partner.xml',
         'views/library_book_genre.xml',
+        'views/library_audit.xml',
+        'security/library_model_access.xml',
         'security/ir.model.access.csv',
         ],
    

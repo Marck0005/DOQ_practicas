@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 16.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-17 13:40+0000\n"
-"PO-Revision-Date: 2023-12-17 14:45+0100\n"
+"POT-Creation-Date: 2023-12-20 13:29+0000\n"
+"PO-Revision-Date: 2023-12-20 14:34+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: es\n"
@@ -123,6 +123,11 @@ msgid "Address Type"
 msgstr ""
 
 #. module: library
+#: model:res.groups,name:library.group_library_admin
+msgid "Administrator"
+msgstr ""
+
+#. module: library
 #: model:ir.model.fields,help:library.field_library_book_author__lang
 msgid "All the emails and documents sent to this contact will be translated in this language."
 msgstr ""
@@ -132,6 +137,12 @@ msgstr ""
 #: model:ir.model.fields,field_description:library.field_library_book_author__message_attachment_count
 msgid "Attachment Count"
 msgstr ""
+
+#. module: library
+#: model:ir.actions.act_window,name:library.show_audit
+#: model:ir.ui.menu,name:library.menu_library_audit
+msgid "Audit"
+msgstr "Auditoría"
 
 #. module: library
 #: model:ir.model.fields,field_description:library.field_library_book__author_id
@@ -209,6 +220,7 @@ msgid "Blacklisted Phone is Phone"
 msgstr ""
 
 #. module: library
+#: model:ir.model.fields,field_description:library.field_library_audit__book_id
 #: model_terms:ir.ui.view,arch_db:library.library_book_view_form
 msgid "Book"
 msgstr "Libro"
@@ -254,6 +266,11 @@ msgstr ""
 #: model:ir.model.fields,field_description:library.field_library_book__route_from_categ_ids
 msgid "Category Routes"
 msgstr ""
+
+#. module: library
+#: model:ir.module.category,description:library.module_category_library
+msgid "Category for the library "
+msgstr "Categoría para la biblioteca"
 
 #. module: library
 #: model:ir.model.fields,field_description:library.field_library_book_author__channel_ids
@@ -389,6 +406,12 @@ msgid "Country Code"
 msgstr ""
 
 #. module: library
+#: model:ir.model.fields.selection,name:library.selection__library_audit__operation__create
+msgid "Create"
+msgstr ""
+
+#. module: library
+#: model:ir.model.fields,field_description:library.field_library_audit__create_uid
 #: model:ir.model.fields,field_description:library.field_library_book__create_uid
 #: model:ir.model.fields,field_description:library.field_library_book_author__create_uid
 #: model:ir.model.fields,field_description:library.field_library_book_component_line__create_uid
@@ -397,6 +420,7 @@ msgid "Created by"
 msgstr "Creado por"
 
 #. module: library
+#: model:ir.model.fields,field_description:library.field_library_audit__create_date
 #: model:ir.model.fields,field_description:library.field_library_book__create_date
 #: model:ir.model.fields,field_description:library.field_library_book_author__create_date
 #: model:ir.model.fields,field_description:library.field_library_book_component_line__create_date
@@ -451,6 +475,7 @@ msgid "Data"
 msgstr "Datos"
 
 #. module: library
+#: model:ir.model.fields,field_description:library.field_library_audit__date
 #: model:ir.model.fields,field_description:library.field_library_book_author__date
 msgid "Date"
 msgstr ""
@@ -532,6 +557,7 @@ msgid "Digital"
 msgstr ""
 
 #. module: library
+#: model:ir.model.fields,field_description:library.field_library_audit__display_name
 #: model:ir.model.fields,field_description:library.field_library_book__display_name
 #: model:ir.model.fields,field_description:library.field_library_book_author__display_name
 #: model:ir.model.fields,field_description:library.field_library_book_component_line__display_name
@@ -680,6 +706,7 @@ msgid "Has Unreconciled Entries"
 msgstr ""
 
 #. module: library
+#: model:ir.model.fields,field_description:library.field_library_audit__id
 #: model:ir.model.fields,field_description:library.field_library_book__id
 #: model:ir.model.fields,field_description:library.field_library_book_author__id
 #: model:ir.model.fields,field_description:library.field_library_book_component_line__id
@@ -905,6 +932,7 @@ msgid "Language"
 msgstr ""
 
 #. module: library
+#: model:ir.model.fields,field_description:library.field_library_audit____last_update
 #: model:ir.model.fields,field_description:library.field_library_book____last_update
 #: model:ir.model.fields,field_description:library.field_library_book_author____last_update
 #: model:ir.model.fields,field_description:library.field_library_book_component_line____last_update
@@ -918,6 +946,7 @@ msgid "Last Name"
 msgstr ""
 
 #. module: library
+#: model:ir.model.fields,field_description:library.field_library_audit__write_uid
 #: model:ir.model.fields,field_description:library.field_library_book__write_uid
 #: model:ir.model.fields,field_description:library.field_library_book_author__write_uid
 #: model:ir.model.fields,field_description:library.field_library_book_component_line__write_uid
@@ -926,6 +955,7 @@ msgid "Last Updated by"
 msgstr ""
 
 #. module: library
+#: model:ir.model.fields,field_description:library.field_library_audit__write_date
 #: model:ir.model.fields,field_description:library.field_library_book__write_date
 #: model:ir.model.fields,field_description:library.field_library_book_author__write_date
 #: model:ir.model.fields,field_description:library.field_library_book_component_line__write_date
@@ -947,9 +977,15 @@ msgid "Latest Invoices & Payments Matching Date"
 msgstr ""
 
 #. module: library
+#: model:ir.module.category,name:library.module_category_library
 #: model:ir.ui.menu,name:library.library_book_menu_act
 msgid "Library"
 msgstr "Librería"
+
+#. module: library
+#: model:ir.model,name:library.model_library_audit
+msgid "Library Audit"
+msgstr "Auditoría de la biblioteca"
 
 #. module: library
 #: model:ir.model.fields,field_description:library.field_library_book__lines_ids
@@ -1090,6 +1126,11 @@ msgid "Next Activity Type"
 msgstr ""
 
 #. module: library
+#: model_terms:ir.actions.act_window,help:library.show_audit
+msgid "No changes has been made."
+msgstr ""
+
+#. module: library
 #: model:ir.model.fields,field_description:library.field_library_book_author__email_normalized
 msgid "Normalized Email"
 msgstr ""
@@ -1158,6 +1199,11 @@ msgstr ""
 #. module: library
 #: model:ir.model.fields,field_description:library.field_library_book_author__on_time_rate
 msgid "On-Time Delivery Rate"
+msgstr ""
+
+#. module: library
+#: model:ir.model.fields,field_description:library.field_library_audit__operation
+msgid "Operation"
 msgstr ""
 
 #. module: library
@@ -1284,9 +1330,16 @@ msgid ""
 msgstr ""
 
 #. module: library
-#: model:ir.model.fields,help:library.field_library_book__list_price
-msgid "Price at which the product is sold to customers."
+#: model:ir.model.fields,field_description:library.field_library_book__list_price
+msgid "Price"
 msgstr ""
+
+#. module: library
+#. odoo-python
+#: code:addons/library/models/library_book.py:0
+#, python-format
+msgid "Price can't be less than 0"
+msgstr "El precio no puede ser menor que 0"
 
 #. module: library
 #: model:ir.model.fields,field_description:library.field_library_book_author__property_product_pricelist
@@ -1489,11 +1542,6 @@ msgstr "Pedido de venta"
 #. module: library
 #: model:ir.model.fields,field_description:library.field_library_book__sale_line_warn
 msgid "Sales Order Line"
-msgstr ""
-
-#. module: library
-#: model:ir.model.fields,field_description:library.field_library_book__list_price
-msgid "Sales Price"
 msgstr ""
 
 #. module: library
@@ -1864,6 +1912,11 @@ msgid "Unit of Measure Name"
 msgstr ""
 
 #. module: library
+#: model:ir.model.fields.selection,name:library.selection__library_audit__operation__unlink
+msgid "Unlink"
+msgstr ""
+
+#. module: library
 #: model:ir.model.fields,help:library.field_library_book_author__barcode
 msgid "Use a barcode to identify this contact."
 msgstr ""
@@ -1871,6 +1924,11 @@ msgstr ""
 #. module: library
 #: model:ir.model.fields,help:library.field_library_book_author__ocn_token
 msgid "Used for sending notification to registered devices"
+msgstr ""
+
+#. module: library
+#: model:ir.model.fields,field_description:library.field_library_audit__user_id
+msgid "User"
 msgstr ""
 
 #. module: library
@@ -1958,6 +2016,18 @@ msgid ""
 "If the timezone is not set, UTC (Coordinated Universal Time) is used.\n"
 "Anywhere else, time values are computed according to the time offset of your web client."
 msgstr ""
+
+#. module: library
+#: model:ir.model.fields.selection,name:library.selection__library_audit__operation__write
+msgid "Write"
+msgstr ""
+
+#. module: library
+#. odoo-python
+#: code:addons/library/models/library_sales_order.py:0
+#, python-format
+msgid "You can only sell to partners"
+msgstr "Solo se puede vender a socios"
 
 #. module: library
 #: model:ir.model.fields,field_description:library.field_library_book_author__zip
