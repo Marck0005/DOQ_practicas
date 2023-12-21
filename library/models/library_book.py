@@ -63,6 +63,10 @@ class LibraryBooks(models.Model):
     #Si queremos usarlo en un constrain, hay que decrararlo en el modelo
     list_price = fields.Float(string='Price')
     
+    synopsis = fields.Html(string='')
+   
+    
+  
     
     @api.onchange('is_pack')
     def _onchange_is_pack(self):
