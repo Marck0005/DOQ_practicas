@@ -19,6 +19,7 @@
         'views/library_audit.xml',
         'views/reports.xml',
         'views/report_books.xml',
+        'views/report_library_sale.xml',
         'security/library_model_access.xml',
         'security/ir.model.access.csv',
         ],

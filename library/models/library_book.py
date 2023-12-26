@@ -96,7 +96,6 @@ class LibraryBooks(models.Model):
             'user_id': self.env.user.id,
             'book_id': book.id,
             'date': fields.Datetime.now(),
-            # add other fields as necessary...
         })
 
         return book
