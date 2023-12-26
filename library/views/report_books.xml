@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <template id = "report_book_template">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <t t-call="library.report_books_document"></t>
+            </t>
+        </t>
+    </template>
+
+    <template id = "report_books_document">
+        <t t-call="web.external_layout">
+            <h1>Tittle: <span t-field="o.name"/>
+            </h1>
+            <h2>Author: <span t-field="o.author_id.name"/>
+            </h2>
+            <h2>Date: <span t-field="o.date"/>
+            </h2>
+            <t t-if="o.image_1920">
+                <h2>Cover:</h2>
+                <!-- <img t-att-src="'data:image/*;base64,%s' % o.image_1920" /> -->
+                <img  t-att-src="image_data_uri(o.image_1920)"/>
+                <br/>
+            </t>
+            <h2>Synopsis: </h2>
+            <h3><span t-field="o.synopsis"/></h3>
+        </t>
+
+    </template>
+
+
+
+
+</odoo>
