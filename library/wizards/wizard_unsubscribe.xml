@@ -1,0 +1,25 @@
+<odoo>
+
+    <!-- wizar_unsubscribe form view -->
+    <record id="wizard_unsubscribe_view_form" model="ir.ui.view">
+        <field name="name">wizard_unsubscribe.view.form</field>
+        <field name="model">wizard.unsubscribe</field>
+        <field name="arch" type="xml">
+            <form string="">
+                <sheet>
+                    <group>
+                        <!-- Add your fields here -->
+                       <field name="reason"/>
+                    </group>
+                </sheet>
+                <footer>
+                    <button name="unsubscribe" string="Unsubscribe" type="object" class="btn-primary"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+
+
+</odoo>

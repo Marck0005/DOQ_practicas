@@ -64,6 +64,15 @@ class ResPartner(models.Model):
             vals['partner_number'] = sequence.next_by_code('res.partner') or '/'
 
         return super(ResPartner, self).write(vals)
+    
+    def launch_wizard_unsubscribe(self):
+        return {
+            'name': 'Unsubscribe Wizard',
+            'type': 'ir.actions.act_window',
+            'res_model': 'wizard.unsubscribe',
+            'view_mode': 'form',
+            'target': 'new',
+        }
 
     
 
