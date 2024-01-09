@@ -71,6 +71,7 @@
 
 
 
+
     <!-- res.partner inherit search view -->
     <record id="library_res_partner_view_search" model="ir.ui.view">
         <field name="name">library_res_partner.inherit.view.search</field>
@@ -130,6 +131,18 @@
         <field name="type">ir.actions.act_window</field>
         <field name="res_model">library.book.author</field>
         <field name="view_mode">tree,form,kanban</field>
+    </record>
+
+
+    <!-- Secuencia de id de socio -->
+    <record id="sequence_partner_number" model="ir.sequence">
+        <field name="name">Library Partner Sequence</field>
+        <field name="code">res.partner</field>
+        <field name="active">True</field>
+        <field name="prefix">SOC_</field>
+        <field name="padding">6</field>
+        <field name="number_next">1</field>
+        <field name="number_increment">1</field>
     </record>
 
 
