@@ -43,13 +43,39 @@ class LibraryResPartner(models.Model):
         
 
     
-
-    
 class ResPartner(models.Model):
     _inherit = 'res.partner'
     
     
     is_partner = fields.Boolean(string='Partner')
-    partner_number = fields.Integer(string='')
+    partner_number = fields.Char(string='' , readonly = True, copy = False)
+    
+    @api.model
+    def create(self, vals):
+        if vals.get('is_bookstore_partner', True):
+            sequence = self.env['ir.sequence']
+            vals['partner_number'] = sequence.next_by_code('res.partner') or '/'
+
+        return super(ResPartner, self).create(vals)
+
+    def write(self, vals):
+        if vals.get('is_bookstore_partner', True):
+            sequence = self.env['ir.sequence']
+            vals['partner_number'] = sequence.next_by_code('res.partner') or '/'
+
+        return super(ResPartner, self).write(vals)
+    
+    def launch_wizard_unsubscribe(self):
+        return {
+            'name': 'Unsubscribe Wizard',
+            'type': 'ir.actions.act_window',
+            'res_model': 'wizard.unsubscribe',
+            'view_mode': 'form',
+            'target': 'new',
+        }
 
     
+
+    
+    
+

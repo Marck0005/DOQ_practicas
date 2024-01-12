@@ -13,6 +13,10 @@
     "installable": True,
     "depends": ['base', 'product', 'sale'],
     "data": [
+        'wizards/wizard_unsubscribe.xml',
+        'wizards/wizard_rent.xml',
+        'wizards/wizard_devo.xml',
+        'views/library_book_rent.xml',
         'views/library_book.xml',
         'views/library_res_partner.xml',
         'views/library_book_genre.xml',
