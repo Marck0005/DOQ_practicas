@@ -4,7 +4,7 @@ class WizardUnsubscribe(models.TransientModel):
     _name = 'wizard.unsubscribe'
     _description = 'Model for unsubscribe partners'
     
-    reason = fields.Text(string='Reason', requiered=True)
+    reason = fields.Text(string='Reason', required = True)
 
     def unsubscribe(self):
         partner_id = self._context["active_id"]

@@ -1,0 +1,44 @@
+<odoo>
+
+
+
+    <!-- wizard_devo action window -->
+    <record id="wizard_devo_action" model="ir.actions.act_window">
+        <field name="name">Wizard Devo</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">wizard.devo</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+
+    </record>
+
+
+
+
+    <!-- wizard_devo form view -->
+    <record id="wizard_devo_view_form" model="ir.ui.view">
+        <field name="name">wizard_devo.view.form</field>
+        <field name="model">wizard.devo</field>
+        <field name="arch" type="xml">
+            <form string="">
+                <sheet>
+                    <group>
+                        <!-- Add your fields here -->
+                        <field name="book_id"/>
+                        <field name="partner_id" attrs = "{'invisible': [('book_id' , '=', None)]}"/>
+                    </group>
+                </sheet>
+                <footer>
+                    <button name="devo" string="Devolution" type="object" class="btn-primary"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+
+
+
+
+
+</odoo>

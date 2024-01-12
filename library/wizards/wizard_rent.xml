@@ -1,0 +1,45 @@
+<odoo>
+
+
+
+    <!-- wizard_rent action window -->
+    <record id="wizard_rent_action" model="ir.actions.act_window">
+        <field name="name">Wizard Rent</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">wizard.rent</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+
+    </record>
+
+
+
+
+    <!-- wizard_rent form view -->
+    <record id="wizard_rent_view_form" model="ir.ui.view">
+        <field name="name">wizard_rent.view.form</field>
+        <field name="model">wizard.rent</field>
+        <field name="arch" type="xml">
+            <form string="">
+                <sheet>
+                    <group>
+                        <!-- Add your fields here -->
+                        <field name="partner_id"/>
+                        <field name="book_id"/>
+                        <field name="rent_date"/>
+                        <field name="devolution_date"/>
+                    </group>
+                </sheet>
+                <footer>
+                    <button name="rent" string="Rent" type="object" class="btn-primary"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+
+
+
+
+</odoo>

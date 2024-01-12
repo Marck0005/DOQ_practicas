@@ -43,7 +43,7 @@
 
             <xpath expr="//sheet" position="before">
                 <header>
-                    <button name="launch_wizard_unsubscribe" string="Unsubscribe" type="object" />
+                    <button name="launch_wizard_unsubscribe" string="Unsubscribe" type="object" attrs ="{'invisible': [('is_partner' , '=' , False)]}"/>
                 </header>
 
             </xpath>

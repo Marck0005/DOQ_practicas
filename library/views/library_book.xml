@@ -111,6 +111,13 @@
 
     <!-- Botón Data en donde está el desplegable -->
     <menuitem id="menu_library_data" name="Data" parent="library_book_menu_act" sequence="1"/>
+    <!-- Botón Rent en donde está el desplegable del alquiler -->
+    <menuitem id="menu_library_rent" name="Rent" parent="library_book_menu_act" sequence="2"/>
+
+    <!-- Submenús adicionales para el alquiler -->
+    <menuitem id="menu_library_rent_books" name="Rent Books" parent="menu_library_rent" action="wizard_rent_action" sequence="1"/>
+    <menuitem id="menu_library_devo_books" name="Devo Books" parent="menu_library_rent" action="wizard_devo_action" sequence="2"/>
+    <menuitem id="menu_library_historic_books" name="Historic" parent="menu_library_rent" action="library_book_rent_action" sequence="3"/>
 
     <!-- Submenús adicionales para Libros, Géneros, Autores y Socios -->
     <menuitem id="menu_library_books" name="Books" parent="menu_library_data" action="library_book_action" sequence="1"/>

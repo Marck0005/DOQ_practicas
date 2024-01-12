@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 16.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-20 13:29+0000\n"
-"PO-Revision-Date: 2023-12-20 14:34+0100\n"
+"POT-Creation-Date: 2024-01-12 17:15+0000\n"
+"PO-Revision-Date: 2024-01-12 18:22+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: es\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.4.1\n"
+"X-Generator: Poedit 3.4.2\n"
 
 #. module: library
 #: model:ir.model.fields,field_description:library.field_library_book__product_variant_count
@@ -25,6 +25,11 @@ msgstr ""
 #. module: library
 #: model:ir.model.fields,field_description:library.field_library_book_author__supplier_invoice_count
 msgid "# Vendor Bills"
+msgstr ""
+
+#. module: library
+#: model:ir.actions.report,print_report_name:library.book_custom_report
+msgid "(\"Book - \" + object.name)"
 msgstr ""
 
 #. module: library
@@ -39,6 +44,16 @@ msgid ""
 "- Private: Private addresses are only visible by authorized users and contain sensitive data "
 "(employee home addresses, ...).\n"
 "- Other: Other address for the company (e.g. subsidiary, ...)"
+msgstr ""
+
+#. module: library
+#: model:ir.model.fields,field_description:library.field_library_book_author__box_1099_id
+msgid "1099 Box"
+msgstr ""
+
+#. module: library
+#: model_terms:ir.ui.view,arch_db:library.library_report_sale
+msgid "<strong>Partner Number:</strong>"
 msgstr ""
 
 #. module: library
@@ -64,6 +79,11 @@ msgstr ""
 #. module: library
 #: model:ir.model.fields,field_description:library.field_library_book_author__property_account_receivable_id
 msgid "Account Receivable"
+msgstr ""
+
+#. module: library
+#: model:ir.model.fields,field_description:library.field_library_book_author__account_represented_company_ids
+msgid "Account Represented Company"
 msgstr ""
 
 #. module: library
@@ -151,6 +171,11 @@ msgid "Author"
 msgstr "Autor"
 
 #. module: library
+#: model_terms:ir.ui.view,arch_db:library.report_books_document
+msgid "Author:"
+msgstr ""
+
+#. module: library
 #: model:ir.actions.act_window,name:library.library_authors_action
 #: model:ir.ui.menu,name:library.menu_library_authors
 msgid "Authors"
@@ -221,6 +246,9 @@ msgstr ""
 
 #. module: library
 #: model:ir.model.fields,field_description:library.field_library_audit__book_id
+#: model:ir.model.fields,field_description:library.field_library_book_rent__book_id
+#: model:ir.model.fields,field_description:library.field_wizard_devo__book_id
+#: model:ir.model.fields,field_description:library.field_wizard_rent__book_id
 #: model_terms:ir.ui.view,arch_db:library.library_book_view_form
 msgid "Book"
 msgstr "Libro"
@@ -229,6 +257,11 @@ msgstr "Libro"
 #: model:ir.model.fields,field_description:library.field_library_book_component_line__book_quantity
 msgid "Book Quantity"
 msgstr "Cantidad de libros"
+
+#. module: library
+#: model:ir.actions.report,name:library.book_custom_report
+msgid "Book report"
+msgstr "Informe sobre el libro"
 
 #. module: library
 #: model:ir.model.fields,field_description:library.field_library_book__book_type
@@ -261,6 +294,13 @@ msgstr ""
 #: model:ir.model.fields,field_description:library.field_library_book__sale_ok
 msgid "Can be Sold"
 msgstr ""
+
+#. module: library
+#: model_terms:ir.ui.view,arch_db:library.wizard_devo_view_form
+#: model_terms:ir.ui.view,arch_db:library.wizard_rent_view_form
+#: model_terms:ir.ui.view,arch_db:library.wizard_unsubscribe_view_form
+msgid "Cancel"
+msgstr "Cancelar"
 
 #. module: library
 #: model:ir.model.fields,field_description:library.field_library_book__route_from_categ_ids
@@ -406,6 +446,11 @@ msgid "Country Code"
 msgstr ""
 
 #. module: library
+#: model_terms:ir.ui.view,arch_db:library.report_books_document
+msgid "Cover:"
+msgstr ""
+
+#. module: library
 #: model:ir.model.fields.selection,name:library.selection__library_audit__operation__create
 msgid "Create"
 msgstr ""
@@ -416,6 +461,10 @@ msgstr ""
 #: model:ir.model.fields,field_description:library.field_library_book_author__create_uid
 #: model:ir.model.fields,field_description:library.field_library_book_component_line__create_uid
 #: model:ir.model.fields,field_description:library.field_library_book_genre__create_uid
+#: model:ir.model.fields,field_description:library.field_library_book_rent__create_uid
+#: model:ir.model.fields,field_description:library.field_wizard_devo__create_uid
+#: model:ir.model.fields,field_description:library.field_wizard_rent__create_uid
+#: model:ir.model.fields,field_description:library.field_wizard_unsubscribe__create_uid
 msgid "Created by"
 msgstr "Creado por"
 
@@ -425,6 +474,10 @@ msgstr "Creado por"
 #: model:ir.model.fields,field_description:library.field_library_book_author__create_date
 #: model:ir.model.fields,field_description:library.field_library_book_component_line__create_date
 #: model:ir.model.fields,field_description:library.field_library_book_genre__create_date
+#: model:ir.model.fields,field_description:library.field_library_book_rent__create_date
+#: model:ir.model.fields,field_description:library.field_wizard_devo__create_date
+#: model:ir.model.fields,field_description:library.field_wizard_rent__create_date
+#: model:ir.model.fields,field_description:library.field_wizard_unsubscribe__create_date
 msgid "Created on"
 msgstr "Creado el"
 
@@ -484,6 +537,11 @@ msgstr ""
 #: model:ir.model.fields,field_description:library.field_library_book__date
 msgid "Date Purchase"
 msgstr "Fecha de compra"
+
+#. module: library
+#: model_terms:ir.ui.view,arch_db:library.report_books_document
+msgid "Date:"
+msgstr ""
 
 #. module: library
 #: model:ir.model.fields,field_description:library.field_library_book_author__reminder_date_before_receipt
@@ -552,6 +610,22 @@ msgid "Description on Receptions"
 msgstr ""
 
 #. module: library
+#: model:ir.ui.menu,name:library.menu_library_devo_books
+msgid "Devo Books"
+msgstr ""
+
+#. module: library
+#: model_terms:ir.ui.view,arch_db:library.wizard_devo_view_form
+msgid "Devolution"
+msgstr ""
+
+#. module: library
+#: model:ir.model.fields,field_description:library.field_library_book_rent__devolution_date
+#: model:ir.model.fields,field_description:library.field_wizard_rent__devolution_date
+msgid "Devolution date"
+msgstr "Fecha de devolución"
+
+#. module: library
 #: model:ir.model.fields.selection,name:library.selection__library_book__book_type__digital
 msgid "Digital"
 msgstr ""
@@ -562,6 +636,10 @@ msgstr ""
 #: model:ir.model.fields,field_description:library.field_library_book_author__display_name
 #: model:ir.model.fields,field_description:library.field_library_book_component_line__display_name
 #: model:ir.model.fields,field_description:library.field_library_book_genre__display_name
+#: model:ir.model.fields,field_description:library.field_library_book_rent__display_name
+#: model:ir.model.fields,field_description:library.field_wizard_devo__display_name
+#: model:ir.model.fields,field_description:library.field_wizard_rent__display_name
+#: model:ir.model.fields,field_description:library.field_wizard_unsubscribe__display_name
 msgid "Display Name"
 msgstr ""
 
@@ -627,6 +705,16 @@ msgstr ""
 #. module: library
 #: model:ir.model.fields,field_description:library.field_library_book_author__property_account_position_id
 msgid "Fiscal Position"
+msgstr ""
+
+#. module: library
+#: model:ir.model.fields,field_description:library.field_library_book_author__followup_line_id
+msgid "Follow-up Level"
+msgstr ""
+
+#. module: library
+#: model:ir.model.fields,field_description:library.field_library_book_author__followup_status
+msgid "Follow-up Status"
 msgstr ""
 
 #. module: library
@@ -706,11 +794,21 @@ msgid "Has Unreconciled Entries"
 msgstr ""
 
 #. module: library
+#: model:ir.actions.act_window,name:library.library_book_rent_action
+#: model:ir.ui.menu,name:library.menu_library_historic_books
+msgid "Historic"
+msgstr ""
+
+#. module: library
 #: model:ir.model.fields,field_description:library.field_library_audit__id
 #: model:ir.model.fields,field_description:library.field_library_book__id
 #: model:ir.model.fields,field_description:library.field_library_book_author__id
 #: model:ir.model.fields,field_description:library.field_library_book_component_line__id
 #: model:ir.model.fields,field_description:library.field_library_book_genre__id
+#: model:ir.model.fields,field_description:library.field_library_book_rent__id
+#: model:ir.model.fields,field_description:library.field_wizard_devo__id
+#: model:ir.model.fields,field_description:library.field_wizard_rent__id
+#: model:ir.model.fields,field_description:library.field_wizard_unsubscribe__id
 msgid "ID"
 msgstr ""
 
@@ -914,6 +1012,11 @@ msgid "Journal Items"
 msgstr ""
 
 #. module: library
+#: model:ir.model.fields,help:library.field_library_book_author__box_1099_id
+msgid "Journal items of this vendor will be summed in the selected box of the 1099 report."
+msgstr ""
+
+#. module: library
 #: model:ir.model.fields,help:library.field_library_book__property_account_income_id
 msgid "Keep this field empty to use the default value from the product category."
 msgstr ""
@@ -937,6 +1040,10 @@ msgstr ""
 #: model:ir.model.fields,field_description:library.field_library_book_author____last_update
 #: model:ir.model.fields,field_description:library.field_library_book_component_line____last_update
 #: model:ir.model.fields,field_description:library.field_library_book_genre____last_update
+#: model:ir.model.fields,field_description:library.field_library_book_rent____last_update
+#: model:ir.model.fields,field_description:library.field_wizard_devo____last_update
+#: model:ir.model.fields,field_description:library.field_wizard_rent____last_update
+#: model:ir.model.fields,field_description:library.field_wizard_unsubscribe____last_update
 msgid "Last Modified on"
 msgstr ""
 
@@ -951,6 +1058,10 @@ msgstr ""
 #: model:ir.model.fields,field_description:library.field_library_book_author__write_uid
 #: model:ir.model.fields,field_description:library.field_library_book_component_line__write_uid
 #: model:ir.model.fields,field_description:library.field_library_book_genre__write_uid
+#: model:ir.model.fields,field_description:library.field_library_book_rent__write_uid
+#: model:ir.model.fields,field_description:library.field_wizard_devo__write_uid
+#: model:ir.model.fields,field_description:library.field_wizard_rent__write_uid
+#: model:ir.model.fields,field_description:library.field_wizard_unsubscribe__write_uid
 msgid "Last Updated by"
 msgstr ""
 
@@ -960,6 +1071,10 @@ msgstr ""
 #: model:ir.model.fields,field_description:library.field_library_book_author__write_date
 #: model:ir.model.fields,field_description:library.field_library_book_component_line__write_date
 #: model:ir.model.fields,field_description:library.field_library_book_genre__write_date
+#: model:ir.model.fields,field_description:library.field_library_book_rent__write_date
+#: model:ir.model.fields,field_description:library.field_wizard_devo__write_date
+#: model:ir.model.fields,field_description:library.field_wizard_rent__write_date
+#: model:ir.model.fields,field_description:library.field_wizard_unsubscribe__write_date
 msgid "Last Updated on"
 msgstr ""
 
@@ -1085,6 +1200,16 @@ msgid "Model for book registry"
 msgstr ""
 
 #. module: library
+#: model:ir.model,name:library.model_library_book_rent
+msgid "Model for rent books"
+msgstr ""
+
+#. module: library
+#: model:ir.model,name:library.model_wizard_unsubscribe
+msgid "Model for unsubscribe partners"
+msgstr ""
+
+#. module: library
 #: model:ir.model.fields,field_description:library.field_library_book__my_activity_date_deadline
 #: model:ir.model.fields,field_description:library.field_library_book_author__my_activity_date_deadline
 msgid "My Activity Deadline"
@@ -1123,6 +1248,11 @@ msgstr ""
 #: model:ir.model.fields,field_description:library.field_library_book__activity_type_id
 #: model:ir.model.fields,field_description:library.field_library_book_author__activity_type_id
 msgid "Next Activity Type"
+msgstr ""
+
+#. module: library
+#: model:ir.model.fields,field_description:library.field_library_book_author__followup_next_action_date
+msgid "Next reminder"
 msgstr ""
 
 #. module: library
@@ -1202,8 +1332,20 @@ msgid "On-Time Delivery Rate"
 msgstr ""
 
 #. module: library
+#: model:ir.model.fields,field_description:library.field_library_book_author__online_partner_information
+msgid "Online Partner Information"
+msgstr ""
+
+#. module: library
 #: model:ir.model.fields,field_description:library.field_library_audit__operation
 msgid "Operation"
+msgstr ""
+
+#. module: library
+#: model:ir.model.fields,help:library.field_library_book_author__followup_responsible_id
+msgid ""
+"Optionally you can assign a user to this field, which will make him responsible for the activities. "
+"If empty, we will find someone responsible."
 msgstr ""
 
 #. module: library
@@ -1247,8 +1389,11 @@ msgstr ""
 
 #. module: library
 #: model:ir.model.fields,field_description:library.field_library_book_author__is_partner
+#: model:ir.model.fields,field_description:library.field_library_book_rent__partner_id
 #: model:ir.model.fields,field_description:library.field_res_partner__is_partner
 #: model:ir.model.fields,field_description:library.field_res_users__is_partner
+#: model:ir.model.fields,field_description:library.field_wizard_devo__partner_id
+#: model:ir.model.fields,field_description:library.field_wizard_rent__partner_id
 msgid "Partner"
 msgstr "Socio"
 
@@ -1304,6 +1449,11 @@ msgstr ""
 #. module: library
 #: model:ir.model.fields,field_description:library.field_library_book_author__payment_token_ids
 msgid "Payment Tokens"
+msgstr ""
+
+#. module: library
+#: model:ir.model.fields.selection,name:library.selection__library_book_rent__state__pending
+msgid "Pending"
 msgstr ""
 
 #. module: library
@@ -1457,6 +1607,16 @@ msgid "Re-Invoice Policy visible"
 msgstr ""
 
 #. module: library
+#: model:ir.model.fields,field_description:library.field_library_book_rent__real_devolution_date
+msgid "Real devolution date"
+msgstr ""
+
+#. module: library
+#: model:ir.model.fields,field_description:library.field_wizard_unsubscribe__reason
+msgid "Reason"
+msgstr ""
+
+#. module: library
 #: model:ir.model.fields,field_description:library.field_library_book_author__receipt_reminder_email
 msgid "Receipt Reminder"
 msgstr ""
@@ -1469,6 +1629,28 @@ msgstr ""
 #. module: library
 #: model:ir.model.fields,field_description:library.field_library_book_author__parent_id
 msgid "Related Company"
+msgstr ""
+
+#. module: library
+#: model:ir.model.fields,field_description:library.field_library_book_author__followup_reminder_type
+msgid "Reminders"
+msgstr ""
+
+#. module: library
+#: model:ir.ui.menu,name:library.menu_library_rent
+#: model_terms:ir.ui.view,arch_db:library.wizard_rent_view_form
+msgid "Rent"
+msgstr ""
+
+#. module: library
+#: model:ir.ui.menu,name:library.menu_library_rent_books
+msgid "Rent Books"
+msgstr ""
+
+#. module: library
+#: model:ir.model.fields,field_description:library.field_library_book_rent__rent_date
+#: model:ir.model.fields,field_description:library.field_wizard_rent__rent_date
+msgid "Rent date"
 msgstr ""
 
 #. module: library
@@ -1488,6 +1670,7 @@ msgstr ""
 
 #. module: library
 #: model:ir.model.fields,field_description:library.field_library_book__responsible_id
+#: model:ir.model.fields,field_description:library.field_library_book_author__followup_responsible_id
 msgid "Responsible"
 msgstr ""
 
@@ -1495,6 +1678,11 @@ msgstr ""
 #: model:ir.model.fields,field_description:library.field_library_book__activity_user_id
 #: model:ir.model.fields,field_description:library.field_library_book_author__activity_user_id
 msgid "Responsible User"
+msgstr ""
+
+#. module: library
+#: model:ir.model.fields.selection,name:library.selection__library_book_rent__state__returned
+msgid "Returned"
 msgstr ""
 
 #. module: library
@@ -1659,6 +1847,7 @@ msgstr "Empieza creando un libro"
 
 #. module: library
 #: model:ir.model.fields,field_description:library.field_library_book_author__state_id
+#: model:ir.model.fields,field_description:library.field_library_book_rent__state
 msgid "State"
 msgstr ""
 
@@ -1698,6 +1887,16 @@ msgid "Supplier Rank"
 msgstr ""
 
 #. module: library
+#: model:ir.model.fields,field_description:library.field_library_book__synopsis
+msgid "Synopsis"
+msgstr ""
+
+#. module: library
+#: model_terms:ir.ui.view,arch_db:library.report_books_document
+msgid "Synopsis:"
+msgstr ""
+
+#. module: library
 #: model:ir.model.fields,field_description:library.field_library_book_author__category_id
 msgid "Tags"
 msgstr ""
@@ -1734,6 +1933,11 @@ msgstr ""
 msgid ""
 "The Tax Identification Number. Values here will be validated based on the country format. You can "
 "use '/' to indicate that the partner is not subject to tax."
+msgstr ""
+
+#. module: library
+#: model:ir.model.fields,help:library.field_library_book_author__followup_next_action_date
+msgid "The date before which no follow-up action should be taken."
 msgstr ""
 
 #. module: library
@@ -1796,6 +2000,20 @@ msgid ""
 msgstr ""
 
 #. module: library
+#. odoo-python
+#: code:addons/library/wizards/wizard_rent.py:0
+#, python-format
+msgid "This partner has already rented 2 or more books."
+msgstr "Este socio ha alquilado 2 o mas libros."
+
+#. module: library
+#. odoo-python
+#: code:addons/library/wizards/wizard_devo.py:0
+#, python-format
+msgid "This partner has not rented this book."
+msgstr "El socio no ha alquilado este libro"
+
+#. module: library
 #: model:ir.model.fields,help:library.field_library_book_author__property_supplier_payment_term_id
 msgid "This payment term will be used instead of the default one for purchase orders and vendor bills"
 msgstr ""
@@ -1853,11 +2071,26 @@ msgstr ""
 #. module: library
 #: model:ir.model.fields,field_description:library.field_library_book_author__title
 msgid "Title"
+msgstr "Título"
+
+#. module: library
+#: model_terms:ir.ui.view,arch_db:library.report_books_document
+msgid "Tittle:"
+msgstr ""
+
+#. module: library
+#: model:ir.model.fields,field_description:library.field_library_book_author__total_due
+msgid "Total Due"
 msgstr ""
 
 #. module: library
 #: model:ir.model.fields,field_description:library.field_library_book_author__total_invoiced
 msgid "Total Invoiced"
+msgstr ""
+
+#. module: library
+#: model:ir.model.fields,field_description:library.field_library_book_author__total_overdue
+msgid "Total Overdue"
 msgstr ""
 
 #. module: library
@@ -1891,6 +2124,16 @@ msgid "Tracking"
 msgstr ""
 
 #. module: library
+#: model:ir.model,name:library.model_wizard_devo
+msgid "Transient model for devo books"
+msgstr ""
+
+#. module: library
+#: model:ir.model,name:library.model_wizard_rent
+msgid "Transient model for rent books"
+msgstr ""
+
+#. module: library
 #: model:ir.model.fields,field_description:library.field_library_book__type
 msgid "Type"
 msgstr ""
@@ -1914,6 +2157,27 @@ msgstr ""
 #. module: library
 #: model:ir.model.fields.selection,name:library.selection__library_audit__operation__unlink
 msgid "Unlink"
+msgstr ""
+
+#. module: library
+#: model:ir.model.fields,field_description:library.field_library_book_author__unpaid_invoice_ids
+msgid "Unpaid Invoice"
+msgstr ""
+
+#. module: library
+#: model:ir.model.fields,field_description:library.field_library_book_author__unpaid_invoices_count
+msgid "Unpaid Invoices Count"
+msgstr ""
+
+#. module: library
+#: model:ir.model.fields,field_description:library.field_library_book_author__unreconciled_aml_ids
+msgid "Unreconciled Aml"
+msgstr ""
+
+#. module: library
+#: model_terms:ir.ui.view,arch_db:library.res_partner_inherit_view_form
+#: model_terms:ir.ui.view,arch_db:library.wizard_unsubscribe_view_form
+msgid "Unsubscribe"
 msgstr ""
 
 #. module: library
@@ -2015,6 +2279,16 @@ msgid ""
 "timezone.\n"
 "If the timezone is not set, UTC (Coordinated Universal Time) is used.\n"
 "Anywhere else, time values are computed according to the time offset of your web client."
+msgstr ""
+
+#. module: library
+#: model:ir.actions.act_window,name:library.wizard_devo_action
+msgid "Wizard Devo"
+msgstr ""
+
+#. module: library
+#: model:ir.actions.act_window,name:library.wizard_rent_action
+msgid "Wizard Rent"
 msgstr ""
 
 #. module: library

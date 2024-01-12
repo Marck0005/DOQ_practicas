@@ -5,6 +5,9 @@ access_res_partner,access_res_partner,model_res_partner,base.group_user,1,1,1,1
 access_library_book_component_line,access_library_book_component_line,model_library_book_component_line,base.group_user,1,1,1,1
 access_library_book_author,access_library_book_author,model_library_book_author,base.group_user,1,1,1,1
 access_library_audit,access_library_audit,model_library_audit,group_library_admin,1,1,1,1
+access_library_book_rent,access_library_book_rent,model_library_book_rent,group_library_admin,1,1,1,1
 access_wizard_unsubscribe,access_wizard_unsubscribe,model_wizard_unsubscribe,group_library_admin,1,1,1,1
+access_wizard_rent,access_wizard_rent,model_wizard_rent,group_library_admin,1,1,1,1
+access_wizard_devo,access_wizard_devo,model_wizard_devo,group_library_admin,1,1,1,1
 
 
