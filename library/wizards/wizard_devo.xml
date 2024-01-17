@@ -20,7 +20,7 @@
         <field name="name">wizard_devo.view.form</field>
         <field name="model">wizard.devo</field>
         <field name="arch" type="xml">
-            <form string="">
+            <form string="Wizard Devo">
                 <sheet>
                     <group>
                         <!-- Add your fields here -->

@@ -1,16 +1,5 @@
 <odoo>
 
-
-    <record id="library_book_rent_view_search" model="ir.ui.view">
-        <field name="name">library.book.rent.view.search</field>
-        <field name="model">library.book.rent</field>
-        <field name="arch" type="xml">
-            <search string="Search Rent">
-                <filter string="Pending" name="pending_search" domain="[('state', '=', 'pending')]"/>
-            </search>
-        </field>
-    </record>
-
     <!-- library.book.rent tree view -->
     <record id="library_book_rent_view_tree" model="ir.ui.view">
         <field name="name">library_book_rent.view.tree</field>
@@ -28,6 +17,18 @@
         </field>
     </record>
 
+    
+    <record id="library_book_rent_view_search" model="ir.ui.view">
+        <field name="name">library.book.rent.view.search</field>
+        <field name="model">library.book.rent</field>
+        <field name="arch" type="xml">
+            <search string="Search Rent">
+                <filter string="Pending" name="pending_search" domain="[('state', '=', 'pending')]"/>
+                <filter string="Rented" name="rented_search" domain="[('state', '=', 'returned')]"/>
+            </search>
+        </field>
+    </record>
+    
 
     <record id="library_book_rent_action" model="ir.actions.act_window">
         <field name="name">Historic</field>

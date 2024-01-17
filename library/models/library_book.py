@@ -51,7 +51,7 @@ class LibraryBooks(models.Model):
                                  selection=[('printed', 'Printed'),
                                             ('digital', 'Digital'),])
 
-# Enlace web de compra --> Caracteres
+    # Enlace web de compra --> Caracteres
     web = fields.Char(string='Purchase Link')
     
     #Se ha comprado --> Bool
@@ -59,14 +59,15 @@ class LibraryBooks(models.Model):
     
     #Fecha de compra --> DateTime
     date = fields.Datetime(string='Date Purchase')
-    
-    #Si queremos usarlo en un constrain, hay que decrararlo en el modelo
-    list_price = fields.Float(string='Price')
-    
+        
     synopsis = fields.Html(string='')
    
     
-  
+    @api.onchange('author_id')
+    def _onchange_author_id(self):
+        author_genres = self.author_id.genres_ids
+        
+        return {'domain': {'genres_ids': [('id', 'in', author_genres.ids)]}}
     
     @api.onchange('is_pack')
     def _onchange_is_pack(self):
