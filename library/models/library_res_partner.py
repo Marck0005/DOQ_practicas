@@ -5,11 +5,13 @@ class LibraryResPartner(models.Model):
     
     _name = 'library.book.author'
     _inherits = {'res.partner': 'author_id'}
+    _inherit = 'library.audit.mixing'
 
     author_id= fields.Many2one(
         'res.partner', 
         string='Author', 
-
+        required=True,
+        ondelete='cascade'
      )
     
     first_name = fields.Char(string='')
@@ -65,7 +67,9 @@ class LibraryResPartner(models.Model):
     
 class ResPartner(models.Model):
     _inherit = 'res.partner'
-    
+    _name = 'res.partner'
+    _inherit = ['res.partner', 'library.audit.mixing']
+
     
     is_partner = fields.Boolean(string='Partner')
     partner_number = fields.Char(string='' , readonly = True, copy = False)
@@ -107,9 +111,6 @@ class ResPartner(models.Model):
         number = self.env['library.book.rent'].read_group([("partner_id", "=", self.id )], ['partner_id'], ['partner_id']) 
         self.rented_book_number = number[0]['partner_id_count'] if number else 0
         self.rent_ids = self.env['library.book.rent'].search([('partner_id', '=', self.id)])
-        
-         
-        
         
     
     @api.model

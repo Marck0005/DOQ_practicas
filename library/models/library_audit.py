@@ -5,18 +5,14 @@ class LibraryAudit(models.Model):
     _description = 'Library Audit'
 
 
-
-
     operation = fields.Selection(string='',
                                  selection=[('create', 'Create'),
                                             ('write', 'Write'),
                                             ('unlink', 'Unlink')])
     
-    user_id = fields.Many2one(comodel_name='res.users',
-                              string='User',)
-    
-    book_id = fields.Many2one(comodel_name='library.book',string='Book')
-    
+    record_id = fields.Integer(string='')
+    record_name = fields.Char(string='', compute='_compute_record_name')
+    record_model = fields.Char(string='')    
     
     
     date = fields.Datetime(
@@ -24,12 +20,11 @@ class LibraryAudit(models.Model):
         default=fields.Datetime.now,
     )
     
-    
-    
-    
-    
-    
-    
-    # Add more fields as needed
-
-    # Add methods and other class definitions here
+    @api.depends('record_model', 'record_id')
+    def _compute_record_name(self):
+        for record in self:
+            name = self.env[record.record_model].browse(record.record_id).name
+            if name:
+                record.record_name = name
+            else:
+                record.record_name = 'Not defined'

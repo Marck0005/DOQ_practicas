@@ -18,7 +18,7 @@
                             <field name="list_price"/>
                             <field name="edition"/>
                             <field name="genres_ids" widget="many2many_tags"/>
-                            
+
                         </group>
 
 
@@ -46,6 +46,9 @@
 
                     </group>
                 </sheet>
+                <div class="oe_chatter">
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
             </form>
         </field>
     </record>
@@ -124,6 +127,7 @@
     <menuitem id="menu_library_genres" name="Genere" parent="menu_library_data" action="library_genre_action" sequence="2"/>
     <menuitem id="menu_library_authors" name="Authors" parent="menu_library_data" action="library_authors_action" sequence="3"/>
     <menuitem id="menu_library_partners" name="Partners" parent="menu_library_data" action="library_partners_action" sequence="4"/>
+    <menuitem id="menu_library_audit" parent="menu_library_data" name="Audit" action="show_audit" sequence="5"/>
 
 
 
