@@ -5,7 +5,9 @@ from odoo.exceptions import ValidationError
 class LibraryBooks(models.Model):
     _name = 'library.book'
     _description = 'Model for book registry'
-    _inherits = {'product.template': 'product_tmpl_id'}
+    _inherits = {'product.template': 'product_tmpl_id'}   
+    _inherit = ['library.audit.mixing','mail.thread', 'mail.activity.mixin']
+
      
 
     # Campo que relaciona el libro creado con un objeto de tipo product
@@ -17,7 +19,7 @@ class LibraryBooks(models.Model):
         auto_join=True,
         required=True,
     )
-  
+    
     
     #Relación con autores, como un autor puede tener muchos libros pero 
     # un libro solo tiene un autor es many2one (muchos libros tienen solo 1 autor)
@@ -86,42 +88,42 @@ class LibraryBooks(models.Model):
     
     
     
-    @api.model
-    def create(self, vals):
-        # create the book record
-        book = super(LibraryBooks, self).create(vals)
+    # @api.model
+    # def create(self, vals):
+    #     # create the book record
+    #     book = super(LibraryBooks, self).create(vals)
 
-        # create an audit line
-        self.env['library.audit'].create({
-            'operation': 'create',
-            'user_id': self.env.user.id,
-            'book_id': book.id,
-            'date': fields.Datetime.now(),
-        })
+    #     # create an audit line
+    #     self.env['library.audit'].create({
+    #         'operation': 'create',
+    #         'user_id': self.env.user.id,
+    #         'book_id': book.id,
+    #         'date': fields.Datetime.now(),
+    #     })
 
-        return book
+    #     return book
     
     
 
-    def write(self, vals):
-        res = super(LibraryBooks, self).write(vals)
-        for book in self:
-            self.env['library.audit'].create({
-                'operation': 'write',
-                'user_id': self.env.user.id,
-                'book_id': book.id,
-                'date': fields.Datetime.now(),
-            })
-        return res
+    # def write(self, vals):
+    #     res = super(LibraryBooks, self).write(vals)
+    #     for book in self:
+    #         self.env['library.audit'].create({
+    #             'operation': 'write',
+    #             'user_id': self.env.user.id,
+    #             'book_id': book.id,
+    #             'date': fields.Datetime.now(),
+    #         })
+    #     return res
     
  
-    def unlink(self):
-        for book in self:
-            self.env['library.audit'].create({
-                'operation': 'unlink',
-                'user_id': self.env.user.id,
-                'book_id': book.id,
-                'date': fields.Datetime.now(),
-            })
-        res = super(LibraryBooks, self).unlink()
-        return res
+    # def unlink(self):
+    #     for book in self:
+    #         self.env['library.audit'].create({
+    #             'operation': 'unlink',
+    #             'user_id': self.env.user.id,
+    #             'book_id': book.id,
+    #             'date': fields.Datetime.now(),
+    #         })
+    #     res = super(LibraryBooks, self).unlink()
+    #     return res

@@ -5,9 +5,10 @@
         <field name="model">library.audit</field>
         <field name="arch" type="xml">
             <tree editable="top" create="0" edit="1">
-                <field name="book_id"/>
+                <field name="record_id"/>
+                <field name="record_name"/>
                 <field name="operation"/>
-                <field name="user_id"/>
+                <field name="record_model"/>
                 <field name="date"/>
             </tree>
         </field>
@@ -26,9 +27,5 @@
 
     </record>
 
-
-
-    <!-- <menuitem id="library_settings_menu" parent="menu_library_data" name="Settings" sequence="2"/> -->
-    <menuitem id="menu_library_audit" parent="menu_library_data" name="Audit" action="show_audit" sequence="5"/>
 
 </odoo>
