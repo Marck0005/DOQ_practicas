@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo noupdate="1">
+
+    <record model="ir.cron" id="ir_cron_library_send_mail_notice">
+        <field name="name">Library: Send mail notice</field>
+        <field name="model_id" ref="library.model_library_book_rent"/>
+        <field name="state">code</field>
+        <field name="interval_number">1</field>
+        <field name="interval_type">days</field>
+        <field name="numbercall">-1</field>
+        <field name="doall" eval="False"/>
+        <field name="nextcall">01/29/2024 18:00:00</field>
+        <field name="code">model.send_mail_notice()</field>
+
+    </record>
+
+</odoo>
