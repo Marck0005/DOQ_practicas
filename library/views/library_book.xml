@@ -116,6 +116,11 @@
     <menuitem id="menu_library_data" name="Data" parent="library_book_menu_act" sequence="1"/>
     <!-- Botón Rent en donde está el desplegable del alquiler -->
     <menuitem id="menu_library_rent" name="Rent" parent="library_book_menu_act" sequence="2"/>
+        <!-- Botón Settings en donde está el desplegable de la configuración -->
+    <menuitem id="menu_library_settings" name="Settings" parent="library_book_menu_act" sequence="3"/>
+
+    <!-- Submenús adicionales para la configuración -->
+    <menuitem id="menu_library_settings_config" name="General" parent="menu_library_settings" action="action_library_config_settings" sequence="1"/>
 
     <!-- Submenús adicionales para el alquiler -->
     <menuitem id="menu_library_rent_books" name="Rent Books" parent="menu_library_rent" action="wizard_rent_action" sequence="1"/>

@@ -1,5 +1,8 @@
 <odoo>
 
+
+
+
     <!-- library.book.rent tree view -->
     <record id="library_book_rent_view_tree" model="ir.ui.view">
         <field name="name">library_book_rent.view.tree</field>
@@ -17,7 +20,7 @@
         </field>
     </record>
 
-    
+
     <record id="library_book_rent_view_search" model="ir.ui.view">
         <field name="name">library.book.rent.view.search</field>
         <field name="model">library.book.rent</field>
@@ -28,7 +31,7 @@
             </search>
         </field>
     </record>
-    
+
 
     <record id="library_book_rent_action" model="ir.actions.act_window">
         <field name="name">Historic</field>
@@ -40,7 +43,15 @@
         <field name="search_view_id" ref="library_book_rent_view_search"/>
     </record>
 
-    
 
+
+    <record id="model_library_book_rent_action_mail_notice" model="ir.actions.server">
+        <field name="name">Send email notice</field>
+        <field name="model_id" ref="library.model_library_book_rent"/>
+        <field name="binding_model_id" ref="library.model_library_book_rent"/>
+        <field name="binding_view_types">form,list</field>
+        <field name="state">code</field>
+        <field name="code">action = records.launch_wizard_mail_notice()</field>
+    </record>
 
 </odoo>

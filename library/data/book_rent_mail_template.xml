@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data >
+        <record id="book_rent_mail_template" model="mail.template">
+            <field name="name">Book Rent</field>
+            <field name="model_id" ref="library.model_library_book_rent"/>
+            <field name="email_from">{{ctx["email_from"]}}</field>
+            <field name="email_to">{{ctx["email_to"]}}</field>
+            <field name="subject"> Hello {{ctx["partner_name"]}}, you have a book pending to be returned</field>
+            <field name="body_html">
+                <![CDATA[
+                <p>
+                Dear <t t-out="object.partner_id.name"></t>,
+                <br>
+                The book pending to be returned is:
+                <br>
+                <table class= "rented_book"
+                    <tr>
+                        <th>Book</th>
+                        <th>Return Date</th>
+                    </tr>
+                    <tr>
+                        <td style="padding-right: 20px;"><t t-out="object.book_id.name"></t></td>
+                        <td><t t-out="object.devolution_date"></t></td>
+                    </tr>
+                </table>
+                <br>
+                <br>
+                Thanks, to trust us.
+                <br>
+                </p>
+                
+            ]]>
+
+            </field>
+
+        </record>
+
+
+    </data>
+</odoo>

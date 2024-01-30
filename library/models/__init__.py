@@ -7,5 +7,7 @@ from . import (
             library_sales_order,
             library_audit,
             library_book_rent,
+            library_res_company,
+            library_res_config,
             
             )
