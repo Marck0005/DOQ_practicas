@@ -20,6 +20,47 @@
         </field>
     </record>
 
+    <record id="library_book_rent_view_graph" model="ir.ui.view">
+        <field name="name">library_book_rent.view.graph</field>
+        <field name="model">library.book.rent</field>
+        <field name="arch" type="xml">
+            <graph string="Rent Pivot" type="bar">
+                <field name="book_id"/>
+                
+            </graph>
+        </field>
+    </record>
+
+
+
+    <!-- library.book.rent pivot -->
+    <record id="library_book_rent_view_pivot" model="ir.ui.view">
+        <field name="name">library_book_rent.view.graph</field>
+        <field name="model">library.book.rent</field>
+        <field name="arch" type="xml">
+            <pivot string="Rent Pivot">
+                <field name="book_id" type="row" />
+                <field name="devolution_date" type="col" interval= "month" />
+
+
+            </pivot>
+        </field>
+    </record>
+
+
+    <!-- library.book.report pivot -->
+    <record id="library_book_report_view_pivot" model="ir.ui.view">
+        <field name="name">library_book_report.view.graph</field>
+        <field name="model">library.book.report</field>
+        <field name="arch" type="xml">
+            <pivot string="Rent Pivot">
+                <field name="sale_count" type="measure" string="Sale"/>
+                <field name="rent_count" type="measure" string="Rent"/>
+                <field name="book_id" type="row" string="Book"/>
+            </pivot>
+        </field>
+    </record>
+
 
     <record id="library_book_rent_view_search" model="ir.ui.view">
         <field name="name">library.book.rent.view.search</field>
@@ -37,11 +78,20 @@
         <field name="name">Historic</field>
         <field name="type">ir.actions.act_window</field>
         <field name="res_model">library.book.rent</field>
-        <field name="view_mode">tree</field>
+        <field name="view_mode">tree,graph,pivot</field>
         <field name="context">{'search_default_pending_search': 1}</field>
-        <field name="view_id" ref="library_book_rent_view_tree"/>
         <field name="search_view_id" ref="library_book_rent_view_search"/>
     </record>
+
+
+    <record id="action_library_report_pivot" model="ir.actions.act_window">
+        <field name="name">Report</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">library.book.report</field>
+        <field name="view_mode">pivot</field>
+    </record>
+
+
 
 
 
