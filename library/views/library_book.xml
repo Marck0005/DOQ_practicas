@@ -116,8 +116,11 @@
     <menuitem id="menu_library_data" name="Data" parent="library_book_menu_act" sequence="1"/>
     <!-- Botón Rent en donde está el desplegable del alquiler -->
     <menuitem id="menu_library_rent" name="Rent" parent="library_book_menu_act" sequence="2"/>
-        <!-- Botón Settings en donde está el desplegable de la configuración -->
+    <!-- Botón Settings en donde está el desplegable de la configuración -->
     <menuitem id="menu_library_settings" name="Settings" parent="library_book_menu_act" sequence="3"/>
+
+    <!-- Botón Report en donde están las vistas con los gráficos -->
+    <menuitem id="menu_library_report" name="Report" parent="library_book_menu_act" action="action_library_report_pivot" sequence="4"/>
 
     <!-- Submenús adicionales para la configuración -->
     <menuitem id="menu_library_settings_config" name="General" parent="menu_library_settings" action="action_library_config_settings" sequence="1"/>
@@ -132,7 +135,7 @@
     <menuitem id="menu_library_genres" name="Genere" parent="menu_library_data" action="library_genre_action" sequence="2"/>
     <menuitem id="menu_library_authors" name="Authors" parent="menu_library_data" action="library_authors_action" sequence="3"/>
     <menuitem id="menu_library_partners" name="Partners" parent="menu_library_data" action="library_partners_action" sequence="4"/>
-    <menuitem id="menu_library_audit" parent="menu_library_data" name="Audit" action="show_audit" sequence="5"/>
+    <menuitem id="menu_library_audit" name="Audit" parent="menu_library_data" action="show_audit" sequence="5"/>
 
 
 

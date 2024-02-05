@@ -66,7 +66,7 @@ class LibraryResPartner(models.Model):
 
     
 class ResPartner(models.Model):
-    _inherit = 'res.partner'
+    #_inherit = 'res.partner'
     _name = 'res.partner'
     _inherit = ['res.partner', 'library.audit.mixing']
 

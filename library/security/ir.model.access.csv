@@ -10,5 +10,7 @@ access_wizard_unsubscribe,access_wizard_unsubscribe,model_wizard_unsubscribe,bas
 access_wizard_rent,access_wizard_rent,model_wizard_rent,base.group_user,1,1,1,1
 access_wizard_devo,access_wizard_devo,model_wizard_devo,base.group_user,1,1,1,1
 access_res_config,access_res_config,model_res_config_settings,base.group_user,1,1,1,1
+access_library_book_report,access_library_book_report,model_library_book_report,base.group_user,1,1,1,1
+
 
 

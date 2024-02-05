@@ -9,5 +9,6 @@ from . import (
             library_book_rent,
             library_res_company,
             library_res_config,
+            library_book_report,
             
             )
